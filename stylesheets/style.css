@@ -7,3 +7,13 @@ h1 {
     text-align: center;
     font-weight: bold;
 }
+
+#photo {
+    width: 200px;
+    height: auto;
+}
+
+.subtitle {
+    color: rgb(107, 114, 128 / 0.89);
+    text-transform: uppercase;
+}
