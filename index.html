@@ -46,8 +46,10 @@
         <section id="proyectos">
             <h2 class="subtitle">Proyectos</h2>
         </section>
-        <img id="photo" src="https://placehold.co/600x400" alt="photo">
-        <a href="mapa.html" class="boton-mapa">Mapa</a>
+        <div>
+            <img id="photo" src="https://placehold.co/600x400" alt="photo">
+            <a href="mapa.html" class="boton-mapa">Mapa</a>
+        </div>
         <section id="contacto">
             <h2 class="subtitle">Contáctame</h2>
             <form>
@@ -60,9 +62,9 @@
                 <label for="educacion">Educación:</label>
                 <textarea id="educacion" name="educacion" rows="5" required></textarea>
                 <label>Habilidades Técnicas:</label><br>
-                    <input type="checkbox" name="habilidades" value="HTML"> HTML
-                    <input type="checkbox" name="habilidades" value="CSS"> CSS
-                    <input type="checkbox" name="habilidades" value="JavaScript">JavaScript
+                    <div><input type="checkbox" name="habilidades" value="HTML"><span>HTML</span></div>
+                    <div><input type="checkbox" name="habilidades" value="CSS"><span>CSS</span></div>
+                    <div><input type="checkbox" name="habilidades" value="JavaScript"><span>JavaScript</span></div>
                 <label for="intereses">Intereses:</label>
                 <select id="intereses" name="intereses">
                     <option value="desarrollo">Desarrollo Web</option>
