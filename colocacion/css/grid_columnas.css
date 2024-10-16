@@ -1,0 +1,11 @@
+main section:nth-child(2n) {
+  background-color: lightcoral;
+}
+
+main section:nth-child(2n+1) {
+  background-color: limegreen;
+}
+
+/* Grid COLUMNAS */
+
+
