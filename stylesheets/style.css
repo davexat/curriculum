@@ -14,23 +14,6 @@ h1 {
     font-weight: bold;
 }
 
-a {
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-li {
-    list-style-type: none;
-}
-
-footer ul {
-    margin: 0 auto;
-    text-align: center;
-}
-
 #photo {
     width: 200px;
     height: auto;
@@ -53,4 +36,68 @@ section {
     -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
     -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
     box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer ul {
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;									
+    justify-content: space-around;
+}
+
+section form {
+    display: grid;									
+    row-gap: 0.5rem;
+}
+/*
+#resumen {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 24vh;
+    flex-wrap: wrap;
+}
+
+#resumen h2, #resumen p{
+    width: 50%;
+}
+
+#resumen img {
+    max-width: 50%;
+}
+*/
+
+#resumen {
+    display: grid;
+    justify-content: space-around;
+    align-items: stretch;
+    grid-template-areas: "A D" "B D";
+}
+
+#resumen h2 {
+    grid-area: A;	 
+}
+
+#resumen p{
+    grid-area: B;
+}
+
+#resumen img{
+    grid-area: D;
 }
