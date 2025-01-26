@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Lockfile
+package-lock.json
+
+# SCSS Cache (opcional si usas herramientas como Compass o similares)
+.sass-cache/
+
+# Sistema operativo y editores de texto
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs y errores
+logs/
+*.log
+
+# Directorios de compilación o transitorios (opcional)
+dist/
+build/
