@@ -7,19 +7,19 @@ yarn-error.log*
 # Lockfile
 package-lock.json
 
-# SCSS Cache (opcional si usas herramientas como Compass o similares)
+# SCSS Cache
 .sass-cache/
 
-# Sistema operativo y editores de texto
+# Operating system and text editors
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
 
-# Logs y errores
+# Logs and error files
 logs/
 *.log
 
-# Directorios de compilación o transitorios (opcional)
+# Build or transient directories (optional)
 dist/
 build/
