@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!--Para el futuro: Poner todo este nav en un solo botón wrap que despliegue un side bar -->
     <!--Para el futuro: Poner varios botones en el nav para ir directamente a las redes sociales-->
     <header class="navbar">
         <div class="navbar-brand">
@@ -32,7 +31,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section id="presentation">
             <div class="wrapper">
@@ -40,26 +39,40 @@
                 <p>Hi! I'm David Elias Sandoval Bernitta, a Web and Software Developer and Data Analyst appasionate by
                     AI.</p>
             </div>
-            <div class="side-content">
-                <!--Para el futuro: Añadir la luna con grafos :)-->
-            </div>
+            <div id="particles-js"> </div>
         </section>
         <section id="about">
-            <h2 class="subtitle">About Me</h2>
-            <p>I love Software Design, Development, Web Development and Data Analysis.</p>
-            <a href="about.html">See more</a>
+            <div class="left">
+                <h2 class="subtitle">About Me</h2>
+                <p>I love Software Design, Development, Web Development and Data Analysis.</p>
+                <a href="about.html">See more</a>
+            </div>
+            <div class="right">
+                <img src="assets/images/sample1.jpg">
+            </div>
             <!--Aquí va un botón que direccione a la ventana con el aboutme :D-->
         </section>
         <section id="projects">
-            <h2 class="subtitle">Projects</h2>
-            <p>I have developed various projects in Software Applications, Web Development, and Data Analysis.</p>
-            <a href="projects.html">See more</a>
+            <div class="left">
+                <h2 class="subtitle">Projects</h2>
+                <p>I have developed various projects in Software Applications, Web Development, and Data Analysis.</p>
+                <a href="projects.html">See more</a>
+            </div>
+            <div class="right">
+                <img src="assets/images/sample1.jpg">
+            </div>
             <!--Aquí va un botón que direccione a la ventana con los proyectos :D-->
         </section>
         <section id="contact">
-            <h2 class="subtitle">Contact Me</h2>
-            <p>example@gmail.com</p>
-            <a href="contact.html">Contact me</a>
+            <div class="left">
+                <h2 class="subtitle">Contact Me</h2>
+                <p>example@gmail.com</p>
+                <a href="contact.html">Contact me</a>
+            </div>
+            <div class="right">
+                <img src="assets/images/sample1.jpg">
+            </div>
+
             <!--Aquí van varios botones que lleven a las redes sociales-->
             <!--Para el futuro: Hacer un formulario que envíe correos manualmente (preguntar a Alex)-->
             <!--Para el futuro: Reciclar los botones mejorados del nav-->
@@ -70,6 +83,7 @@
         <p>© David Sandoval - 2025</p>
         <!--Para el futuro: Incluir botones personalizados-->
     </footer>
+    <script src="scripts/particles.min.js"></script>
     <script type="module" src="scripts/index.js"></script>
 </body>
 

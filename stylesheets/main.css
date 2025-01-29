@@ -17,6 +17,12 @@
   box-sizing: border-box;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -83,40 +89,48 @@
   color: #1e90ff;
 }
 
-@media (max-width: 320px) {
-  #presentation {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  #presentation .side-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: -1;
-  }
-  #presentation .wrapper {
-    text-align: center;
-    padding: 0 1rem;
-    z-index: 1;
-  }
+#presentation {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+#presentation .wrapper {
+  padding: 0 1rem;
+  z-index: 1;
+}
+#presentation .subtitle {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.5rem;
+}
+#presentation p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+#presentation #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
+@media (max-width: 375px) {
   #presentation .subtitle {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
   #presentation p {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.4;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
@@ -140,13 +154,95 @@
   .navbar .navbar-brand h1 {
     font-size: 1.2rem;
   }
+  #presentation .subtitle {
+    font-size: 1.8rem;
+  }
+  #presentation p {
+    font-size: 1.2rem;
+  }
 }
-@media (min-width: 769px) {
+@media (max-width: 1023px) {
   .navbar-toggle {
     display: none;
   }
   .navbar-links {
     display: flex;
+  }
+  #presentation .wrapper {
+    width: 80%;
+  }
+  #presentation .subtitle {
+    font-size: 2rem;
+  }
+  #presentation p {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #presentation .wrapper {
+    width: 60%;
+  }
+  #presentation .subtitle {
+    font-size: 2.3rem;
+  }
+  #presentation p {
+    font-size: 1.7rem;
+  }
+  #about, #projects, #contact {
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #about .left, #projects .left, #contact .left {
+    width: 50%;
+  }
+  #about .left .subtitle, #projects .left .subtitle, #contact .left .subtitle {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+  }
+  #about .left p, #projects .left p, #contact .left p {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+  }
+  #about .left a, #projects .left a, #contact .left a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  #about .left a:hover, #projects .left a:hover, #contact .left a:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 15px #000;
+  }
+  #about .left a::before, #projects .left a::before, #contact .left a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+  }
+  #about .left a:hover::before, #projects .left a:hover::before, #contact .left a:hover::before {
+    left: 0;
+  }
+  #about .right, #projects .right, #contact .right {
+    width: 40%;
+  }
+  #about .right img, #projects .right img, #contact .right img {
+    height: 60vh;
   }
 }
 

@@ -1,4 +1,11 @@
 @use 'variables';
+@use 'mixins';
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .navbar {
     position: fixed;
@@ -79,44 +86,53 @@
     }
 }
 
-@media (max-width: 320px){
+#presentation {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    overflow: hidden;
 
+    .wrapper {
+        padding: 0 1rem;
+        z-index: 1;
+    }
+
+    .subtitle {
+        font-family: variables.$font-secondary;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-family: variables.$font-primary;
+        line-height: 1.4;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 375px) {
     #presentation {
-        position:relative;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        .side-content{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.1);
-            z-index: -1;
+        .subtitle {
+            font-size: 1.5rem;
         }
-
-        .wrapper{
-            text-align: center;
-            padding: 0 1rem;
-            z-index: 1;
-        }
-
-        .subtitle{
-            font-family: variables.$font-secondary;
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p{
-            font-family: variables.$font-primary;
-            font-size: 1.2rem;
-            line-height: 1.4;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+        p {
+            font-size: 1rem;
         }
     }
 }
@@ -147,14 +163,113 @@
             font-size: 1.2rem;
         }
     }
+
+    #presentation {
+        .subtitle {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
 }
 
-@media (min-width: 769px) {
+@media (max-width: 1023px) {
     .navbar-toggle {
         display: none;
     }
 
     .navbar-links {
         display: flex;
+    }
+
+    #presentation {
+        .wrapper{
+            width: 80%;
+        }
+        .subtitle {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    #presentation {
+        .wrapper{
+            width: 60%;
+        }
+        .subtitle {
+            font-size: 2.3rem;
+        }
+        p {
+            font-size: 1.7rem;
+        }
+    }
+
+    #about, #projects, #contact {
+        width: 60%;
+        height: 100vh;
+        @include mixins.flex-center;
+        justify-content: space-between;
+        
+        .left{
+            width: 50%;
+            .subtitle{
+                font-size: 2rem;
+                font-family: variables.$font-secondary;
+            }
+            p{
+                font-size: 1.5rem;
+                font-family: variables.$font-secondary;
+            }
+
+            a {
+                display: inline-block;
+                padding: 0.8rem 1.5rem;
+                font-size: 1.2rem;
+                font-family: variables.$font-secondary;
+                text-decoration: none;
+                color: #000; // Dark text color to contrast with white background
+                border: 2px solid #000; // Dark border to stand out on a white background
+                border-radius: 8px;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+            
+                &:hover {
+                    background: #000; // Dark background on hover
+                    color: #fff; // White text on hover for contrast
+                    box-shadow: 0 0 15px #000; // Dark glow on hover
+                }
+            
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.2); // Light dark shadow on hover
+                    transition: left 0.3s ease-in-out;
+                }
+            
+                &:hover::before {
+                    left: 0;
+                }
+            }
+            
+            
+        }
+
+        .right{
+            width: 40%;
+
+            img{
+                height: 60vh;
+            }
+        }
     }
 }

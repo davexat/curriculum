@@ -13,5 +13,8 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.83.4"
+  },
+  "dependencies": {
+    "particlesjs": "^2.2.3"
   }
 }
