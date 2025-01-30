@@ -1,7 +1,7 @@
 @use 'variables';
 @use 'mixins';
 
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,18 +31,19 @@ main{
     }
 
     .navbar-toggle {
-        display: none; 
-        justify-content: center; 
-        align-items: center; 
+        display: none;
+        justify-content: center;
+        align-items: center;
         background: transparent;
         border: none;
         cursor: pointer;
         padding: 0;
-        
+
         position: relative;
         right: 1rem;
 
         .hamburger-icon {
+
             &::before,
             &::after {
                 content: '';
@@ -126,19 +127,188 @@ main{
     }
 }
 
-@media (max-width: 375px) {
-    #presentation {
+#about,
+#projects,
+#contact {
+    height: 100vh;
+    @include mixins.flex-center;
+
+    .left {
         .subtitle {
-            font-size: 1.5rem;
+            font-family: variables.$font-secondary;
         }
+
         p {
-            font-size: 1rem;
+            font-family: variables.$font-secondary;
+        }
+
+        a {
+            display: inline-block;
+            font-family: variables.$font-secondary;
+            text-decoration: none;
+            color: #000;
+            border: 2px solid #000;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+                box-shadow: 0 0 15px #000;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.2);
+                transition: left 0.3s ease-in-out;
+            }
+
+            &:hover::before {
+                left: 0;
+            }
+        }
+    }
+
+    .right {
+        width: 40%;
+        @include mixins.flex-center;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+
+    #about,
+    #projects,
+    #contact {
+        width: 900px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    #about,
+    #projects,
+    #contact {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #presentation {
+        .wrapper {
+            width: 60%;
+        }
+
+        .subtitle {
+            font-size: 2.3rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+        }
+    }
+
+    #about,
+    #projects,
+    #contact {
+        justify-content: space-between;
+
+        .left {
+            width: 50%;
+
+            .subtitle,
+            p {
+                margin-bottom: 1rem;
+            }
+
+            .subtitle {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            a {
+                padding: 0.8rem 1.5rem;
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: #000;
+                border: 2px solid #000;
+                border-radius: 8px;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background: #000;
+                    color: #fff;
+                    box-shadow: 0 0 15px #000;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.2);
+                    transition: left 0.3s ease-in-out;
+                }
+
+                &:hover::before {
+                    left: 0;
+                }
+            }
+        }
+
+        .right {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .navbar-links {
+        display: flex;
+    }
+
+    #presentation {
+        .wrapper {
+            width: 80%;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
         }
     }
 }
 
 @media (max-width: 768px) {
-    .navbar{
+    .navbar {
         .navbar-links {
             display: none;
             width: 100%;
@@ -150,11 +320,11 @@ main{
             padding: 1rem;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
         }
-    
+
         .navbar-links.open {
             display: flex;
         }
-    
+
         .navbar-toggle {
             display: flex;
         }
@@ -168,107 +338,66 @@ main{
         .subtitle {
             font-size: 1.8rem;
         }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+
+    html{
+        scroll-padding-top: 110px;
+    }
+
+    #presentation {
+        .subtitle {
+            font-size: 1.5rem;
+        }
+
         p {
             font-size: 1.2rem;
         }
     }
-}
 
-@media (max-width: 1023px) {
-    .navbar-toggle {
-        display: none;
-    }
+    #about,
+    #projects,
+    #contact {
+        flex-direction: column;
+        gap: 1rem;
+        width: 90%;
+        height: 70vh;
 
-    .navbar-links {
-        display: flex;
-    }
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 1rem 0;
 
-    #presentation {
-        .wrapper{
-            width: 80%;
-        }
-        .subtitle {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1.5rem;
-        }
-    }
-}
+        .left {
+            width: 100%;
 
-@media (min-width: 1024px){
-    #presentation {
-        .wrapper{
-            width: 60%;
-        }
-        .subtitle {
-            font-size: 2.3rem;
-        }
-        p {
-            font-size: 1.7rem;
-        }
-    }
-
-    #about, #projects, #contact {
-        width: 60%;
-        height: 100vh;
-        @include mixins.flex-center;
-        justify-content: space-between;
-        
-        .left{
-            width: 50%;
-            .subtitle{
-                font-size: 2rem;
-                font-family: variables.$font-secondary;
+            .subtitle {
+                font-size: 1.3rem;
             }
-            p{
-                font-size: 1.5rem;
-                font-family: variables.$font-secondary;
+
+            p {
+                font-size: 1rem;
+            }
+
+            .subtitle,
+            p {
+                margin-bottom: 0.7rem;
             }
 
             a {
-                display: inline-block;
-                padding: 0.8rem 1.5rem;
-                font-size: 1.2rem;
-                font-family: variables.$font-secondary;
-                text-decoration: none;
-                color: #000; // Dark text color to contrast with white background
-                border: 2px solid #000; // Dark border to stand out on a white background
-                border-radius: 8px;
-                position: relative;
-                overflow: hidden;
-                transition: all 0.3s ease-in-out;
-            
-                &:hover {
-                    background: #000; // Dark background on hover
-                    color: #fff; // White text on hover for contrast
-                    box-shadow: 0 0 15px #000; // Dark glow on hover
-                }
-            
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.2); // Light dark shadow on hover
-                    transition: left 0.3s ease-in-out;
-                }
-            
-                &:hover::before {
-                    left: 0;
-                }
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
             }
-            
-            
         }
 
-        .right{
-            width: 40%;
-
-            img{
-                height: 60vh;
+        .right {
+            img {
+                width: 50vw;
             }
         }
     }
