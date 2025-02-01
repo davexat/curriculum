@@ -129,9 +129,14 @@ main {
 #projects,
 #contact {
   height: 100vh;
+  max-height: 1080px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  justify-content: space-between;
 }
 #about .left .subtitle,
 #projects .left .subtitle,
@@ -196,26 +201,12 @@ main {
   object-fit: contain;
 }
 
-@media (min-width: 1440px) {
-  #about,
-  #projects,
-  #contact {
-    width: 900px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1439px) {
-  #about,
-  #projects,
-  #contact {
-    width: 60%;
-  }
-}
 @media (min-width: 1024px) {
   #presentation .wrapper {
-    width: 60%;
+    width: 80%;
   }
   #presentation .subtitle {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
   }
   #presentation p {
     font-size: 1.7rem;
@@ -223,7 +214,8 @@ main {
   #about,
   #projects,
   #contact {
-    justify-content: space-between;
+    width: 900px;
+    height: 100vh;
   }
   #about .left,
   #projects .left,
@@ -241,54 +233,31 @@ main {
   #about .left .subtitle,
   #projects .left .subtitle,
   #contact .left .subtitle {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   #about .left p,
   #projects .left p,
   #contact .left p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   #about .left a,
   #projects .left a,
   #contact .left a {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: #000;
-    border: 2px solid #000;
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-  #about .left a:hover,
-  #projects .left a:hover,
-  #contact .left a:hover {
-    background: #000;
-    color: #fff;
-    box-shadow: 0 0 15px #000;
-  }
-  #about .left a::before,
-  #projects .left a::before,
-  #contact .left a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    transition: left 0.3s ease-in-out;
-  }
-  #about .left a:hover::before,
-  #projects .left a:hover::before,
-  #contact .left a:hover::before {
-    left: 0;
+    padding: 0.7rem 1.2rem;
+    font-size: 1.3rem;
   }
   #about .right,
   #projects .right,
   #contact .right {
-    width: 40%;
+    width: 50%;
+    height: 100vh;
+  }
+  #about .right img,
+  #projects .right img,
+  #contact .right img {
+    height: 75%;
+    width: 75%;
+    object-fit: contain;
   }
 }
 @media (max-width: 1023px) {
@@ -305,7 +274,55 @@ main {
     font-size: 2rem;
   }
   #presentation p {
+    font-size: 1.6rem;
+  }
+  #about,
+  #projects,
+  #contact {
+    width: 80%;
+    height: 80vh;
+  }
+  #about .left,
+  #projects .left,
+  #contact .left {
+    width: 45%;
+  }
+  #about .left .subtitle,
+  #projects .left .subtitle,
+  #contact .left .subtitle {
     font-size: 1.5rem;
+  }
+  #about .left p,
+  #projects .left p,
+  #contact .left p {
+    font-size: 1.3rem;
+  }
+  #about .left .subtitle,
+  #about .left p,
+  #projects .left .subtitle,
+  #projects .left p,
+  #contact .left .subtitle,
+  #contact .left p {
+    margin-bottom: 0.9rem;
+  }
+  #about .left a,
+  #projects .left a,
+  #contact .left a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  #about .right,
+  #projects .right,
+  #contact .right {
+    width: 45%;
+    height: 80vh;
+  }
+  #about .right img,
+  #projects .right img,
+  #contact .right img {
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
   }
 }
 @media (max-width: 768px) {
@@ -335,8 +352,56 @@ main {
   #presentation p {
     font-size: 1.4rem;
   }
+  #about,
+  #projects,
+  #contact {
+    width: 90%;
+    height: 70vh;
+  }
+  #about .left,
+  #projects .left,
+  #contact .left {
+    width: 50%;
+  }
+  #about .left .subtitle,
+  #projects .left .subtitle,
+  #contact .left .subtitle {
+    font-size: 1.5rem;
+  }
+  #about .left p,
+  #projects .left p,
+  #contact .left p {
+    font-size: 1.1rem;
+  }
+  #about .left .subtitle,
+  #about .left p,
+  #projects .left .subtitle,
+  #projects .left p,
+  #contact .left .subtitle,
+  #contact .left p {
+    margin-bottom: 0.8rem;
+  }
+  #about .left a,
+  #projects .left a,
+  #contact .left a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  #about .right,
+  #projects .right,
+  #contact .right {
+    width: 45%;
+    height: 70vh;
+  }
+  #about .right img,
+  #projects .right img,
+  #contact .right img {
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
+  }
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   html {
     scroll-padding-top: 110px;
   }
@@ -351,8 +416,9 @@ main {
   #contact {
     flex-direction: column;
     gap: 1rem;
-    width: 90%;
+    width: 90vw;
     height: 70vh;
+    justify-content: space-around;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     padding: 1rem 0;
@@ -360,6 +426,7 @@ main {
   #about .left,
   #projects .left,
   #contact .left {
+    height: 40vh;
     width: 100%;
   }
   #about .left .subtitle,
@@ -386,10 +453,18 @@ main {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
+  #about .right,
+  #projects .right,
+  #contact .right {
+    min-height: 30vw;
+    width: 100%;
+  }
   #about .right img,
   #projects .right img,
   #contact .right img {
-    width: 50vw;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
 }
 
