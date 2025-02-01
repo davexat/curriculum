@@ -1,5 +1,6 @@
 @use 'variables';
 @use 'mixins';
+@use 'base';
 
 main {
     display: flex;
@@ -21,15 +22,12 @@ main {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     font-family: variables.$font-primary;
-
     .navbar-brand h1 {
         font-size: 1.5rem;
         margin: 0;
-        font-weight: bold;
         color: variables.$navbar-highlight;
         font-family: variables.$font-secondary;
     }
-
     .navbar-toggle {
         display: none;
         justify-content: center;
@@ -38,12 +36,9 @@ main {
         border: none;
         cursor: pointer;
         padding: 0;
-
         position: relative;
         right: 1rem;
-
         .hamburger-icon {
-
             &::before,
             &::after {
                 content: '';
@@ -53,32 +48,26 @@ main {
                 background-color: variables.$navbar-text;
                 transition: all 0.3s ease;
             }
-
             &::before {
                 top: -6px;
             }
-
             &::after {
                 top: 6px;
             }
         }
     }
-
     .navbar-links {
         display: flex;
         list-style: none;
         margin: 0;
         padding: 0;
-
         li {
             margin-left: 1rem;
-
             a {
                 text-decoration: none;
                 color: variables.$navbar-text;
                 font-size: 1rem;
                 transition: color 0.3s;
-
                 &:hover {
                     color: variables.$navbar-hover;
                 }
@@ -98,24 +87,17 @@ main {
     text-align: center;
     color: white;
     overflow: hidden;
-
     .wrapper {
+        width: 80%;
         padding: 0 1rem;
         z-index: 1;
     }
-
-    .subtitle {
-        font-family: variables.$font-secondary;
-        margin-bottom: 0.5rem;
-    }
-
     p {
         font-family: variables.$font-primary;
         line-height: 1.4;
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
-
     #particles-js {
         position: absolute;
         top: 0;
@@ -130,186 +112,66 @@ main {
 #about,
 #projects,
 #contact {
-    height: 100vh;
-    max-height: 1080px;
     @include mixins.flex-center;
+    width: 80vw;
+    height: 100vh;
+    max-height: 1200px;
 
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     padding: 1rem 0;
     justify-content: space-between;
-
     .left {
-        .subtitle {
-            font-family: variables.$font-secondary;
-        }
-
-        p {
-            font-family: variables.$font-secondary;
-        }
-
+        width: 50%;
         a {
-            display: inline-block;
             font-family: variables.$font-secondary;
-            text-decoration: none;
-            color: #000;
-            border: 2px solid #000;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-
-            &:hover {
-                background: #000;
-                color: #fff;
-                box-shadow: 0 0 15px #000;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.2);
-                transition: left 0.3s ease-in-out;
-            }
-
-            &:hover::before {
-                left: 0;
-            }
+            @include mixins.button(#000, #fff, #000);
         }
     }
-
     .right {
-        width: 40%;
         @include mixins.flex-center;
-
+        width: 45%;
+        height: 100vh;
         img {
-            height: 100%;
-            width: 100%;
+            height: 75%;
+            width: 75%;
             object-fit: contain;
         }
     }
 }
 
-@media (min-width: 1024px) {
-
-    #presentation {
-        .wrapper {
-            width: 80%;
-        }
-
-        .subtitle {
-            font-size: 2.1rem;
-        }
-
-        p {
-            font-size: 1.7rem;
-        }
-    }
-
+@media (min-width: 1440px) {
     #about,
     #projects,
     #contact {
-        width: 950px;
-        height: 100vh;
         .left{
-            width: 50%;
-
-            .subtitle,
-            p {
-                margin-bottom: 1rem;
-            }
-
-            .subtitle {
-                font-size: 1.9rem;
-            }
-
-            p {
-                font-size: 1.6rem;
-            }
-
+            /* MODULARIZAR ESTO */
             a {
+                font-size: 1.1vw;
                 padding: 0.7rem 1.2rem;
-                font-size: 1.3rem;
-            }
-        }
-        .right {
-            width: 50%;
-            height: 100vh;
-
-            img {
-                height: 75%;
-                width: 75%;
-                object-fit: contain;
             }
         }
     }
-
 }
 
-@media (max-width: 1023px) {
-
-    .navbar-toggle {
-        display: none;
-    }
-
-    .navbar-links {
-        display: flex;
-    }
-
-    #presentation {
-        .wrapper {
-            width: 80%;
-        }
-
-        .subtitle {
-            font-size: 2rem;
-        }
-
-        p {
-            font-size: 1.6rem;
-        }
-    }
-
+@media (max-width: 1439px) {
     #about,
     #projects,
     #contact {
         width: 80%;
-        height: 80vh;
-
+        height: 90vh;
+        justify-content: space-around;
         .left {
-            width: 45%;
-
-            .subtitle {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 1.3rem;
-            }
-
-            .subtitle,
-            p {
-                margin-bottom: 0.9rem;
-            }
-
             a {
+                font-size: 1.2rem;
                 padding: 0.5rem 1rem;
-                font-size: 1rem;
             }
         }
-
         .right {
-            width: 45%;
             height: 80vh;
-
             img {
                 height: 85%;
                 width: 85%;
-                object-fit: contain;
             }
         }
     }
@@ -341,74 +203,31 @@ main {
             font-size: 1.2rem;
         }
     }
-
-    #presentation {
-        .subtitle {
-            font-size: 1.8rem;
-        }
-
-        p {
-            font-size: 1.4rem;
-        }
-    }
-
     #about,
     #projects,
     #contact {
         width: 90%;
         height: 70vh;
-
         .left {
-            width: 50%;
-
-            .subtitle {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 1.1rem;
-            }
-
-            .subtitle,
-            p {
-                margin-bottom: 0.8rem;
-            }
-
             a {
                 padding: 0.5rem 1rem;
                 font-size: 1rem;
             }
         }
-
         .right {
-            width: 45%;
             height: 70vh;
-
             img {
                 height: 85%;
                 width: 85%;
-                object-fit: contain;
             }
         }
     }
 }
 
 @media (max-width: 480px) {
-
     html {
         scroll-padding-top: 110px;
     }
-
-    #presentation {
-        .subtitle {
-            font-size: 1.5rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-        }
-    }
-
     #about,
     #projects,
     #contact {
@@ -417,43 +236,17 @@ main {
         width: 90vw;
         height: 70vh;
         justify-content: space-around;
-
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        padding: 1rem 0;
-
         .left {
             height: 40vh;
             width: 100%;
-
-            .subtitle {
-                font-size: 1.3rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .subtitle,
-            p {
-                margin-bottom: 0.7rem;
-            }
-
             a {
                 padding: 0.5rem 1rem;
                 font-size: 1rem;
             }
         }
-
         .right {
             min-height: 30vw;
             width: 100%;
-
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: contain;
-            }
         }
     }
 }

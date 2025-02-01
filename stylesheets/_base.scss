@@ -1,3 +1,6 @@
+@use 'variables';
+@use 'mixins';
+
 @font-face {
     font-family: 'Poppins';
     src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
@@ -19,4 +22,27 @@
 * {
     margin: 0;
     box-sizing: border-box;
+}
+
+.principal-title {
+    font-family: variables.$font-secondary;
+    @include mixins.responsive-text(1.5rem, 1.8rem, 2rem, 2.2vw);
+    margin-bottom: 0.5rem;
+}
+
+.principal-text{
+    font-family: variables.$font-secondary;
+    @include mixins.responsive-text(1.2rem, 1.4rem, 1.6rem, 1.8vw);
+}
+
+.section-title{
+    font-family: variables.$font-secondary;
+    @include mixins.responsive-text(1.3rem, 1.5rem, 1.6rem, 1.5vw);
+    margin-bottom: 0.8rem;
+}
+
+.section-text {
+    font-family: variables.$font-primary;
+    @include mixins.responsive-text(1rem, 1.1rem, 1.4rem, 1.3vw);
+    margin-bottom: 0.8rem;
 }

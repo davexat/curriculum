@@ -17,6 +17,89 @@
   box-sizing: border-box;
 }
 
+.principal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2vw;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1440px) {
+  .principal-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 769px) {
+  .principal-title {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .principal-title {
+    font-size: 1.5rem;
+  }
+}
+
+.principal-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8vw;
+}
+@media (max-width: 1440px) {
+  .principal-text {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 769px) {
+  .principal-text {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .principal-text {
+    font-size: 1.2rem;
+  }
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5vw;
+  margin-bottom: 0.8rem;
+}
+@media (max-width: 1440px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 769px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
+
+.section-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3vw;
+  margin-bottom: 0.8rem;
+}
+@media (max-width: 1440px) {
+  .section-text {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 769px) {
+  .section-text {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-text {
+    font-size: 1rem;
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -41,7 +124,6 @@ main {
 .navbar .navbar-brand h1 {
   font-size: 1.5rem;
   margin: 0;
-  font-weight: bold;
   color: #ff6f61;
   font-family: "Poppins", sans-serif;
 }
@@ -102,12 +184,9 @@ main {
   overflow: hidden;
 }
 #presentation .wrapper {
+  width: 80%;
   padding: 0 1rem;
   z-index: 1;
-}
-#presentation .subtitle {
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 0.5rem;
 }
 #presentation p {
   font-family: "Open Sans", sans-serif;
@@ -128,31 +207,27 @@ main {
 #about,
 #projects,
 #contact {
-  height: 100vh;
-  max-height: 1080px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80vw;
+  height: 100vh;
+  max-height: 1200px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 1rem 0;
   justify-content: space-between;
 }
-#about .left .subtitle,
-#projects .left .subtitle,
-#contact .left .subtitle {
-  font-family: "Poppins", sans-serif;
-}
-#about .left p,
-#projects .left p,
-#contact .left p {
-  font-family: "Poppins", sans-serif;
+#about .left,
+#projects .left,
+#contact .left {
+  width: 50%;
 }
 #about .left a,
 #projects .left a,
 #contact .left a {
-  display: inline-block;
   font-family: "Poppins", sans-serif;
+  display: inline-block;
   text-decoration: none;
   color: #000;
   border: 2px solid #000;
@@ -168,153 +243,53 @@ main {
   color: #fff;
   box-shadow: 0 0 15px #000;
 }
-#about .left a::before,
-#projects .left a::before,
-#contact .left a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  transition: left 0.3s ease-in-out;
-}
-#about .left a:hover::before,
-#projects .left a:hover::before,
-#contact .left a:hover::before {
-  left: 0;
-}
 #about .right,
 #projects .right,
 #contact .right {
-  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 45%;
+  height: 100vh;
 }
 #about .right img,
 #projects .right img,
 #contact .right img {
-  height: 100%;
-  width: 100%;
+  height: 75%;
+  width: 75%;
   object-fit: contain;
 }
 
-@media (min-width: 1024px) {
-  #presentation .wrapper {
-    width: 80%;
-  }
-  #presentation .subtitle {
-    font-size: 2.1rem;
-  }
-  #presentation p {
-    font-size: 1.7rem;
-  }
-  #about,
-  #projects,
-  #contact {
-    width: 950px;
-    height: 100vh;
-  }
+@media (min-width: 1440px) {
   #about .left,
   #projects .left,
   #contact .left {
-    width: 50%;
-  }
-  #about .left .subtitle,
-  #about .left p,
-  #projects .left .subtitle,
-  #projects .left p,
-  #contact .left .subtitle,
-  #contact .left p {
-    margin-bottom: 1rem;
-  }
-  #about .left .subtitle,
-  #projects .left .subtitle,
-  #contact .left .subtitle {
-    font-size: 1.9rem;
-  }
-  #about .left p,
-  #projects .left p,
-  #contact .left p {
-    font-size: 1.6rem;
+    /* MODULARIZAR ESTO */
   }
   #about .left a,
   #projects .left a,
   #contact .left a {
+    font-size: 1.1vw;
     padding: 0.7rem 1.2rem;
-    font-size: 1.3rem;
-  }
-  #about .right,
-  #projects .right,
-  #contact .right {
-    width: 50%;
-    height: 100vh;
-  }
-  #about .right img,
-  #projects .right img,
-  #contact .right img {
-    height: 75%;
-    width: 75%;
-    object-fit: contain;
   }
 }
-@media (max-width: 1023px) {
-  .navbar-toggle {
-    display: none;
-  }
-  .navbar-links {
-    display: flex;
-  }
-  #presentation .wrapper {
-    width: 80%;
-  }
-  #presentation .subtitle {
-    font-size: 2rem;
-  }
-  #presentation p {
-    font-size: 1.6rem;
-  }
+@media (max-width: 1439px) {
   #about,
   #projects,
   #contact {
     width: 80%;
-    height: 80vh;
-  }
-  #about .left,
-  #projects .left,
-  #contact .left {
-    width: 45%;
-  }
-  #about .left .subtitle,
-  #projects .left .subtitle,
-  #contact .left .subtitle {
-    font-size: 1.5rem;
-  }
-  #about .left p,
-  #projects .left p,
-  #contact .left p {
-    font-size: 1.3rem;
-  }
-  #about .left .subtitle,
-  #about .left p,
-  #projects .left .subtitle,
-  #projects .left p,
-  #contact .left .subtitle,
-  #contact .left p {
-    margin-bottom: 0.9rem;
+    height: 90vh;
+    justify-content: space-around;
   }
   #about .left a,
   #projects .left a,
   #contact .left a {
+    font-size: 1.2rem;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
   }
   #about .right,
   #projects .right,
   #contact .right {
-    width: 45%;
     height: 80vh;
   }
   #about .right img,
@@ -322,7 +297,6 @@ main {
   #contact .right img {
     height: 85%;
     width: 85%;
-    object-fit: contain;
   }
 }
 @media (max-width: 768px) {
@@ -346,40 +320,11 @@ main {
   .navbar .navbar-brand h1 {
     font-size: 1.2rem;
   }
-  #presentation .subtitle {
-    font-size: 1.8rem;
-  }
-  #presentation p {
-    font-size: 1.4rem;
-  }
   #about,
   #projects,
   #contact {
     width: 90%;
     height: 70vh;
-  }
-  #about .left,
-  #projects .left,
-  #contact .left {
-    width: 50%;
-  }
-  #about .left .subtitle,
-  #projects .left .subtitle,
-  #contact .left .subtitle {
-    font-size: 1.5rem;
-  }
-  #about .left p,
-  #projects .left p,
-  #contact .left p {
-    font-size: 1.1rem;
-  }
-  #about .left .subtitle,
-  #about .left p,
-  #projects .left .subtitle,
-  #projects .left p,
-  #contact .left .subtitle,
-  #contact .left p {
-    margin-bottom: 0.8rem;
   }
   #about .left a,
   #projects .left a,
@@ -390,7 +335,6 @@ main {
   #about .right,
   #projects .right,
   #contact .right {
-    width: 45%;
     height: 70vh;
   }
   #about .right img,
@@ -398,18 +342,11 @@ main {
   #contact .right img {
     height: 85%;
     width: 85%;
-    object-fit: contain;
   }
 }
 @media (max-width: 480px) {
   html {
     scroll-padding-top: 110px;
-  }
-  #presentation .subtitle {
-    font-size: 1.5rem;
-  }
-  #presentation p {
-    font-size: 1.2rem;
   }
   #about,
   #projects,
@@ -419,33 +356,12 @@ main {
     width: 90vw;
     height: 70vh;
     justify-content: space-around;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    padding: 1rem 0;
   }
   #about .left,
   #projects .left,
   #contact .left {
     height: 40vh;
     width: 100%;
-  }
-  #about .left .subtitle,
-  #projects .left .subtitle,
-  #contact .left .subtitle {
-    font-size: 1.3rem;
-  }
-  #about .left p,
-  #projects .left p,
-  #contact .left p {
-    font-size: 1rem;
-  }
-  #about .left .subtitle,
-  #about .left p,
-  #projects .left .subtitle,
-  #projects .left p,
-  #contact .left .subtitle,
-  #contact .left p {
-    margin-bottom: 0.7rem;
   }
   #about .left a,
   #projects .left a,
@@ -458,13 +374,6 @@ main {
   #contact .right {
     min-height: 30vw;
     width: 100%;
-  }
-  #about .right img,
-  #projects .right img,
-  #contact .right img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
   }
 }
 
