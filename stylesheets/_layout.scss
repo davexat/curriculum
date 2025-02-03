@@ -161,34 +161,54 @@ main {
     }
 }
 
-.techs {
-    @include mixins.flex-center;
-    width: 90vw;
+#about-me, #my-journey, #skills{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+    justify-content: space-between;
+    width: 80vw;
+}
 
-    .tech {
-        background-color: #6fbdfc;
-        border-radius: 10px;
-        padding: 0px;
-        padding: 5px 10px;
-        a {
-            @include mixins.flex-center;
-            text-decoration: none;
-            gap: 10px;
-            img{
-                height: 30px;
-                width: 30px;
-            }
-            p {
-                color: black;
-                font-weight: bold;
-                font-family: variables.$font-primary;
-                font-size: 20px;
+#about-me{
+    order: 2;
+}
+
+#my-journey{
+    order: 3;
+}
+
+#skills{
+    order: 1;
+    text-align: center;
+    .techs {
+        @include mixins.flex-center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .tech {
+            background-color: #b0dbff;
+            border-radius: 5px;
+            padding: 0px;
+            padding: 5px 10px;
+            a {
+                @include mixins.flex-center;
+                text-decoration: none;
+                gap: 10px;
+                img{
+                    height: 28px;
+                    width: 28px;
+                }
+                p {
+                    color: black;
+                    font-weight: bold;
+                    font-family: variables.$font-primary;
+                    font-size: 18px;
+                }
             }
         }
-    }
-
-    .tech:hover {
-        background-color: variables.$hover-color;
+    
+        .tech:hover {
+            background-color: variables.$hover-color;
+        }
     }
 }
 

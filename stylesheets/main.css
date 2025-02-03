@@ -318,36 +318,57 @@ main {
   object-fit: contain;
 }
 
-.techs {
+#about-me, #my-journey, #skills {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+#about-me {
+  order: 2;
+}
+
+#my-journey {
+  order: 3;
+}
+
+#skills {
+  order: 1;
+  text-align: center;
+}
+#skills .techs {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90vw;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-.techs .tech {
-  background-color: #6fbdfc;
-  border-radius: 10px;
+#skills .techs .tech {
+  background-color: #b0dbff;
+  border-radius: 5px;
   padding: 0px;
   padding: 5px 10px;
 }
-.techs .tech a {
+#skills .techs .tech a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   gap: 10px;
 }
-.techs .tech a img {
-  height: 30px;
-  width: 30px;
+#skills .techs .tech a img {
+  height: 28px;
+  width: 28px;
 }
-.techs .tech a p {
+#skills .techs .tech a p {
   color: black;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
-.techs .tech:hover {
+#skills .techs .tech:hover {
   background-color: #47acff;
 }
 
