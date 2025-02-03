@@ -46,3 +46,9 @@
     @include mixins.responsive-text(1rem, 1.1rem, 1.4rem, 1.3vw);
     margin-bottom: 0.8rem;
 }
+
+.footer-text {
+    font-family: variables.$font-primary;
+    @include mixins.responsive-text(0.9rem, 1rem, 1.3rem, 1.2vw);
+    margin-bottom: 0.8rem;
+}

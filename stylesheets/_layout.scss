@@ -140,6 +140,43 @@ main {
     }
 }
 
+footer{
+    background-color: #121212;
+    @include mixins.flex-center;
+    flex-direction: column;
+    padding: 0.7rem;
+    p{
+        color: white;
+    }
+    .icons{
+        display: flex;
+        width: 180px;
+        justify-content: space-around;
+
+        .social-icon{
+            @include mixins.flex-center;
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+
+            a{
+                @include mixins.flex-center;
+                img {
+                    height: 50%;
+                    width: 50%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .social-icon:hover{
+            background-color: variables.$hover-color;
+        }
+    }
+}
+
 @media (min-width: 1440px) {
     #about,
     #projects,
@@ -154,7 +191,7 @@ main {
     }
 }
 
-@media (max-width: 1439px) {
+@media (max-width: variables.$width-desktop) {
     #about,
     #projects,
     #contact {
@@ -175,9 +212,19 @@ main {
             }
         }
     }
+
+    footer{
+        .icons{
+            width: 175px;
+            .social-icon{
+                width: 2.8rem;
+                height: 2.8rem;
+            }
+        }
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: variables.$width-tablet) {
     .navbar {
         .navbar-links {
             display: none;
@@ -222,9 +269,20 @@ main {
             }
         }
     }
+
+    footer{
+        .icons{
+            width: 150px;
+            .social-icon{
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: variables.$width-mobile) {
     html {
         scroll-padding-top: 110px;
     }
@@ -247,6 +305,16 @@ main {
         .right {
             min-height: 30vw;
             width: 100%;
+        }
+    }
+
+    footer{
+        .icons{
+            width: 140px;
+            .social-icon{
+                width: 2.3rem;
+                height: 2.3rem;
+            }
         }
     }
 }

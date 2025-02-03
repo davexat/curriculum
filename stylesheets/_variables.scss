@@ -1,9 +1,9 @@
-$background: linear-gradient(45deg, #121212, #333);
+$hover-color: #47acff;
 
 $navbar-bg: #121212;
 $navbar-text: #ffffff;
-$navbar-hover: #1e90ff;
-$navbar-highlight: #ff6f61;
+$navbar-hover: $hover-color;
+$navbar-highlight: $hover-color;
 
 $font-primary: 'Open Sans', sans-serif;
 $font-secondary: 'Poppins', sans-serif;
