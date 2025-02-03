@@ -9,18 +9,21 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <h1>David Sandoval</h1>
-        </a>
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html"><h1>David Sandoval</h1></a>
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+            <ul class="navbar-links">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="about.html">About me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
     <main>
         <h1>Contact Me</h1>
         <section id="form">

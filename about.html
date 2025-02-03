@@ -9,35 +9,38 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <h1>David Sandoval</h1>
-        </a>
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="index.html"><h1>David Sandoval</h1></a>
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+            <ul class="navbar-links">
+                <li><a href="#">About me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="about.html">About me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
     <main>
         <h1>About Me</h1>
         <section id="about-me">
-            <h2 class="subtitle">Who I Am</h2>
-            <p>
+            <h2 class="section-title">Who I Am</h2>
+            <p class="section-text">
                 Hi! I'm David Sandoval, a passionate web developer and data analyst with a strong interest in Artificial
                 Intelligence and modern software engineering practices.
             </p>
-            <p>
+            <p class="section-text">
                 Outside of coding, I enjoy exploring City Pop music, practicing calisthenics, and diving into new
                 programming challenges!
             </p>
             <!--Para el futuro: Poner una foto mía bien aesthetic-->
         </section>
         <section id="my-journey">
-            <h2>My Journey</h2>
-            <p>
+            <h2 class="section-title">My Journey</h2>
+            <p class="section-text">
                 I began my journey in computer science when I discovered PSeint. I was fascinated by everything I could
                 create with this tool, which eventually led me to Python, the first programming language I learned, and
                 I was truly amazed. This experience inspired me to pursue the degree I am currently studying. As I
@@ -45,7 +48,7 @@
             </p>
         </section>
         <section id="skills">
-            <h2>Skills</h2>
+            <h2 class="section-title">Skills and Technologies</h2>
             <!--AÑADIR ASSETS-->
             <!--Hacer una tabla con los íconos de las tecnologías que uso y sé-->
             <table>
