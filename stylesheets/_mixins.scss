@@ -38,3 +38,19 @@
         font-size: $mobile;
     }
 }
+
+@mixin responsive-padding($mobile, $tablet, $desktop, $default) {
+    padding: $default;
+
+    @media (max-width: variables.$width-desktop) {
+        padding: $desktop;
+    }
+
+    @media (max-width: variables.$width-tablet) {
+        padding: $tablet;
+    }
+
+    @media (max-width: variables.$width-mobile) {
+        padding: $mobile;
+    }
+}

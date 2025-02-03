@@ -95,8 +95,7 @@ main {
         padding: 0 1rem;
         z-index: 1;
     }
-    p {
-        font-family: variables.$font-primary;
+    .principal-text {
         line-height: 1.4;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -126,8 +125,7 @@ main {
     justify-content: space-between;
     .left {
         width: 50%;
-        a {
-            font-family: variables.$font-secondary;
+        .section-button {
             @include mixins.button(#000, #fff, #000);
         }
     }
@@ -177,20 +175,6 @@ footer{
     }
 }
 
-@media (min-width: 1440px) {
-    #about,
-    #projects,
-    #contact {
-        .left{
-            /* MODULARIZAR ESTO */
-            a {
-                font-size: 1.1vw;
-                padding: 0.7rem 1.2rem;
-            }
-        }
-    }
-}
-
 @media (max-width: variables.$width-desktop) {
     #about,
     #projects,
@@ -198,12 +182,6 @@ footer{
         width: 80%;
         height: 90vh;
         justify-content: space-around;
-        .left {
-            a {
-                font-size: 1.2rem;
-                padding: 0.5rem 1rem;
-            }
-        }
         .right {
             height: 80vh;
             img {
@@ -254,12 +232,6 @@ footer{
     #contact {
         width: 90%;
         height: 70vh;
-        .left {
-            a {
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-            }
-        }
         .right {
             height: 70vh;
             img {
@@ -295,10 +267,6 @@ footer{
         .left {
             height: 40vh;
             width: 100%;
-            a {
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
-            }
         }
         .right {
             min-height: 30vw;

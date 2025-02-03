@@ -31,7 +31,7 @@
 }
 
 .principal-text{
-    font-family: variables.$font-secondary;
+    font-family: variables.$font-primary;
     @include mixins.responsive-text(1.2rem, 1.4rem, 1.6rem, 1.8vw);
 }
 
@@ -45,6 +45,12 @@
     font-family: variables.$font-primary;
     @include mixins.responsive-text(1rem, 1.1rem, 1.4rem, 1.3vw);
     margin-bottom: 0.8rem;
+}
+
+.section-button{
+    font-family: variables.$font-secondary;
+    @include mixins.responsive-padding(0.4rem 0.9rem, 0.5rem 1rem, 0.6rem 1.1rem, 0.7rem 1.2rem);
+    @include mixins.responsive-text(1rem, 1rem, 1.2rem, 1.1vw);
 }
 
 .footer-text {
