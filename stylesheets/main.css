@@ -372,6 +372,35 @@ main {
   background-color: #47acff;
 }
 
+.icons {
+  display: flex;
+  width: 180px;
+  justify-content: space-around;
+}
+.icons .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+.icons .social-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons .social-icon a img {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+}
+.icons .social-icon:hover {
+  background-color: #47acff;
+}
+
 footer {
   background-color: #121212;
   display: flex;
@@ -382,34 +411,6 @@ footer {
 }
 footer p {
   color: white;
-}
-footer .icons {
-  display: flex;
-  width: 180px;
-  justify-content: space-around;
-}
-footer .icons .social-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  border: 1px solid white;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-}
-footer .icons .social-icon a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer .icons .social-icon a img {
-  height: 50%;
-  width: 50%;
-  object-fit: contain;
-}
-footer .icons .social-icon:hover {
-  background-color: #47acff;
 }
 
 @media (max-width: 1440px) {
@@ -431,10 +432,10 @@ footer .icons .social-icon:hover {
     height: 85%;
     width: 85%;
   }
-  footer .icons {
+  .icons {
     width: 175px;
   }
-  footer .icons .social-icon {
+  .icons .social-icon {
     width: 2.8rem;
     height: 2.8rem;
   }
@@ -477,10 +478,10 @@ footer .icons .social-icon:hover {
     height: 85%;
     width: 85%;
   }
-  footer .icons {
+  .icons {
     width: 150px;
   }
-  footer .icons .social-icon {
+  .icons .social-icon {
     width: 2.5rem;
     height: 2.5rem;
   }
@@ -510,10 +511,10 @@ footer .icons .social-icon:hover {
     min-height: 30vw;
     width: 100%;
   }
-  footer .icons {
+  .icons {
     width: 140px;
   }
-  footer .icons .social-icon {
+  .icons .social-icon {
     width: 2.3rem;
     height: 2.3rem;
   }

@@ -1,5 +1,3 @@
-// particlesConfig.js
-
 particlesJS("particles-js", {
     "particles": {
         "number": {
@@ -70,15 +68,15 @@ particlesJS("particles-js", {
         }
     },
     "interactivity": {
-        "detect_on": "canvas",
+        "detect_on": "window",
         "events": {
             "onhover": {
                 "enable": true,
                 "mode": "repulse"
             },
             "onclick": {
-                "enable": false,
-                "mode": "push"
+                "enable": true,
+                "mode": "repulse"
             },
             "resize": true
         },

@@ -212,6 +212,35 @@ main {
     }
 }
 
+.icons {
+    display: flex;
+    width: 180px;
+    justify-content: space-around;
+
+    .social-icon {
+        @include mixins.flex-center;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+
+        a {
+            @include mixins.flex-center;
+
+            img {
+                height: 50%;
+                width: 50%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .social-icon:hover {
+        background-color: variables.$hover-color;
+    }
+}
+
 footer {
     background-color: #121212;
     @include mixins.flex-center;
@@ -220,35 +249,6 @@ footer {
 
     p {
         color: white;
-    }
-
-    .icons {
-        display: flex;
-        width: 180px;
-        justify-content: space-around;
-
-        .social-icon {
-            @include mixins.flex-center;
-            background-color: black;
-            border: 1px solid white;
-            border-radius: 50%;
-            width: 3rem;
-            height: 3rem;
-
-            a {
-                @include mixins.flex-center;
-
-                img {
-                    height: 50%;
-                    width: 50%;
-                    object-fit: contain;
-                }
-            }
-        }
-
-        .social-icon:hover {
-            background-color: variables.$hover-color;
-        }
     }
 }
 
@@ -271,14 +271,12 @@ footer {
         }
     }
 
-    footer {
-        .icons {
-            width: 175px;
+    .icons {
+        width: 175px;
 
-            .social-icon {
-                width: 2.8rem;
-                height: 2.8rem;
-            }
+        .social-icon {
+            width: 2.8rem;
+            height: 2.8rem;
         }
     }
 }
@@ -326,14 +324,12 @@ footer {
         }
     }
 
-    footer {
-        .icons {
-            width: 150px;
+    .icons {
+        width: 150px;
 
-            .social-icon {
-                width: 2.5rem;
-                height: 2.5rem;
-            }
+        .social-icon {
+            width: 2.5rem;
+            height: 2.5rem;
         }
     }
 
@@ -364,14 +360,12 @@ footer {
         }
     }
 
-    footer {
-        .icons {
-            width: 140px;
+    .icons {
+        width: 140px;
 
-            .social-icon {
-                width: 2.3rem;
-                height: 2.3rem;
-            }
+        .social-icon {
+            width: 2.3rem;
+            height: 2.3rem;
         }
     }
 }
