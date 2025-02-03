@@ -22,15 +22,20 @@ main {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     font-family: variables.$font-primary;
+
     .navbar-brand {
-        a {text-decoration: none;}
+        a {
+            text-decoration: none;
+        }
+
         h1 {
-        font-size: 1.5rem;
-        margin: 0;
-        color: variables.$navbar-highlight;
-        font-family: variables.$font-secondary;
+            font-size: 1.5rem;
+            margin: 0;
+            color: variables.$navbar-highlight;
+            font-family: variables.$font-secondary;
         }
     }
+
     .navbar-toggle {
         display: none;
         justify-content: center;
@@ -41,7 +46,9 @@ main {
         padding: 0;
         position: relative;
         right: 1rem;
+
         .hamburger-icon {
+
             &::before,
             &::after {
                 content: '';
@@ -51,26 +58,32 @@ main {
                 background-color: variables.$navbar-text;
                 transition: all 0.3s ease;
             }
+
             &::before {
                 top: -6px;
             }
+
             &::after {
                 top: 6px;
             }
         }
     }
+
     .navbar-links {
         display: flex;
         list-style: none;
         margin: 0;
         padding: 0;
+
         li {
             margin-left: 1rem;
+
             a {
                 text-decoration: none;
                 color: variables.$navbar-text;
                 font-size: 1rem;
                 transition: color 0.3s;
+
                 &:hover {
                     color: variables.$navbar-hover;
                 }
@@ -90,16 +103,19 @@ main {
     text-align: center;
     color: white;
     overflow: hidden;
+
     .wrapper {
         width: 80%;
         padding: 0 1rem;
         z-index: 1;
     }
+
     .principal-text {
         line-height: 1.4;
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
+
     #particles-js {
         position: absolute;
         top: 0;
@@ -123,16 +139,20 @@ main {
     border-bottom: 1px solid #ccc;
     padding: 1rem 0;
     justify-content: space-between;
+
     .left {
         width: 50%;
+
         .section-button {
             @include mixins.button(#000, #fff, #000);
         }
     }
+
     .right {
         @include mixins.flex-center;
         width: 45%;
         height: 100vh;
+
         img {
             height: 75%;
             width: 75%;
@@ -141,27 +161,63 @@ main {
     }
 }
 
-footer{
+.techs {
+    @include mixins.flex-center;
+    width: 90vw;
+
+    .tech {
+        background-color: #92ceff;
+        border-radius: 10px;
+        padding: 0px;
+        padding: 5px 10px;
+        a {
+            @include mixins.flex-center;
+            text-decoration: none;
+            gap: 10px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
+            p {
+                color: black;
+                font-weight: bold;
+                font-family: variables.$font-primary;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .tech:hover {
+        background-color: variables.$hover-color;
+    }
+}
+
+footer {
     background-color: #121212;
     @include mixins.flex-center;
     flex-direction: column;
     padding: 0.7rem;
-    p{
+
+    p {
         color: white;
     }
-    .icons{
+
+    .icons {
         display: flex;
         width: 180px;
         justify-content: space-around;
-        .social-icon{
+
+        .social-icon {
             @include mixins.flex-center;
             background-color: black;
             border: 1px solid white;
             border-radius: 50%;
             width: 3rem;
             height: 3rem;
-            a{
+
+            a {
                 @include mixins.flex-center;
+
                 img {
                     height: 50%;
                     width: 50%;
@@ -169,31 +225,37 @@ footer{
                 }
             }
         }
-        .social-icon:hover{
+
+        .social-icon:hover {
             background-color: variables.$hover-color;
         }
     }
 }
 
 @media (max-width: variables.$width-desktop) {
+
     #about,
     #projects,
     #contact {
         width: 80%;
         height: 90vh;
         justify-content: space-around;
+
         .right {
             height: 80vh;
+
             img {
                 height: 85%;
                 width: 85%;
             }
         }
     }
-    footer{
-        .icons{
+
+    footer {
+        .icons {
             width: 175px;
-            .social-icon{
+
+            .social-icon {
                 width: 2.8rem;
                 height: 2.8rem;
             }
@@ -227,23 +289,28 @@ footer{
             font-size: 1.2rem;
         }
     }
+
     #about,
     #projects,
     #contact {
         width: 90%;
         height: 70vh;
+
         .right {
             height: 70vh;
+
             img {
                 height: 85%;
                 width: 85%;
             }
         }
     }
-    footer{
-        .icons{
+
+    footer {
+        .icons {
             width: 150px;
-            .social-icon{
+
+            .social-icon {
                 width: 2.5rem;
                 height: 2.5rem;
             }
@@ -256,6 +323,7 @@ footer{
     html {
         scroll-padding-top: 110px;
     }
+
     #about,
     #projects,
     #contact {
@@ -264,19 +332,23 @@ footer{
         width: 90vw;
         height: 70vh;
         justify-content: space-around;
+
         .left {
             height: 40vh;
             width: 100%;
         }
+
         .right {
             min-height: 30vw;
             width: 100%;
         }
     }
-    footer{
-        .icons{
+
+    footer {
+        .icons {
             width: 140px;
-            .social-icon{
+
+            .social-icon {
                 width: 2.3rem;
                 height: 2.3rem;
             }

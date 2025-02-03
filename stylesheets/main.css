@@ -318,6 +318,39 @@ main {
   object-fit: contain;
 }
 
+.techs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
+.techs .tech {
+  background-color: #92ceff;
+  border-radius: 10px;
+  padding: 0px;
+  padding: 5px 10px;
+}
+.techs .tech a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+.techs .tech a img {
+  height: 30px;
+  width: 30px;
+}
+.techs .tech a p {
+  color: black;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+.techs .tech:hover {
+  background-color: #47acff;
+}
+
 footer {
   background-color: #121212;
   display: flex;
