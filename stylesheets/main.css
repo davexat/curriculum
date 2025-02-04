@@ -19,8 +19,11 @@
 
 .principal-title {
   font-family: "Poppins", sans-serif;
-  font-size: 2.2vw;
-  margin-bottom: 0.5rem;
+}
+@media (min-width: 0px) {
+  .principal-title {
+    font-size: 2.2vw;
+  }
 }
 @media (max-width: 1440px) {
   .principal-title {
@@ -40,7 +43,11 @@
 
 .principal-text {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.8vw;
+}
+@media (min-width: 0px) {
+  .principal-text {
+    font-size: 1.8vw;
+  }
 }
 @media (max-width: 1440px) {
   .principal-text {
@@ -60,8 +67,11 @@
 
 .section-title {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5vw;
-  margin-bottom: 0.8rem;
+}
+@media (min-width: 0px) {
+  .section-title {
+    font-size: 1.5vw;
+  }
 }
 @media (max-width: 1440px) {
   .section-title {
@@ -79,10 +89,61 @@
   }
 }
 
+.section-subtitle {
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 0px) {
+  .section-subtitle {
+    font-size: 1.4vw;
+  }
+}
+@media (max-width: 1440px) {
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 769px) {
+  .section-subtitle {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+.section-subsubtitle {
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 0px) {
+  .section-subsubtitle {
+    font-size: 1.2vw;
+  }
+}
+@media (max-width: 1440px) {
+  .section-subsubtitle {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 769px) {
+  .section-subsubtitle {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-subsubtitle {
+    font-size: 1.1rem;
+  }
+}
+
 .section-text {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.3vw;
-  margin-bottom: 0.8rem;
+}
+@media (min-width: 0px) {
+  .section-text {
+    font-size: 1.3vw;
+  }
 }
 @media (max-width: 1440px) {
   .section-text {
@@ -100,10 +161,37 @@
   }
 }
 
+.section-subtext {
+  font-family: "Open Sans", sans-serif;
+}
+@media (min-width: 0px) {
+  .section-subtext {
+    font-size: 1.2vw;
+  }
+}
+@media (max-width: 1440px) {
+  .section-subtext {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 769px) {
+  .section-subtext {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .section-subtext {
+    font-size: 1rem;
+  }
+}
+
 .section-button {
   font-family: "Poppins", sans-serif;
-  padding: 0.7rem 1.2rem;
-  font-size: 1.1vw;
+}
+@media (min-width: 0px) {
+  .section-button {
+    padding: 0.7rem 1.2rem;
+  }
 }
 @media (max-width: 1440px) {
   .section-button {
@@ -118,6 +206,11 @@
 @media (max-width: 480px) {
   .section-button {
     padding: 0.4rem 0.9rem;
+  }
+}
+@media (min-width: 0px) {
+  .section-button {
+    font-size: 1.1vw;
   }
 }
 @media (max-width: 1440px) {
@@ -138,8 +231,11 @@
 
 .footer-text {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.2vw;
-  margin-bottom: 0.8rem;
+}
+@media (min-width: 0px) {
+  .footer-text {
+    font-size: 1.2vw;
+  }
 }
 @media (max-width: 1440px) {
   .footer-text {
@@ -155,6 +251,10 @@
   .footer-text {
     font-size: 0.9rem;
   }
+}
+
+.principal-title, .section-subtitle, .section-subsubtitle, .section-text, .section-subtext, .footer-text {
+  margin-bottom: 1rem;
 }
 
 main {
@@ -348,7 +448,6 @@ main {
 #skills .techs .tech {
   background-color: #b0dbff;
   border-radius: 5px;
-  padding: 0px;
   padding: 5px 10px;
 }
 #skills .techs .tech a {
@@ -413,11 +512,54 @@ footer p {
   color: white;
 }
 
+#education-experience {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#education-experience .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: right;
+  gap: 5rem;
+  width: 100%;
+}
+
+#work-experience {
+  width: 45%;
+}
+
+#education {
+  max-width: 45%;
+}
+
+.education-items, .work-experience-items {
+  border-left: 2px solid #47acff;
+  padding-left: 1rem;
+}
+
+.education-item, .work-experience-item {
+  position: relative;
+}
+.education-item .point, .work-experience-item .point {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: -25px;
+}
+
 @media (max-width: 1440px) {
   #about,
   #projects,
   #contact {
-    width: 80%;
+    width: 80vw;
     height: 90vh;
     justify-content: space-around;
   }
@@ -464,7 +606,7 @@ footer p {
   #about,
   #projects,
   #contact {
-    width: 90%;
+    width: 90vw;
     height: 70vh;
   }
   #about .right,
@@ -484,6 +626,15 @@ footer p {
   .icons .social-icon {
     width: 2.5rem;
     height: 2.5rem;
+  }
+  #education-experience .container {
+    width: 80vw;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  #education-experience .container #education, #education-experience .container #work-experience {
+    width: 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 480px) {

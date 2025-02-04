@@ -187,7 +187,6 @@ main {
         .tech {
             background-color: #b0dbff;
             border-radius: 5px;
-            padding: 0px;
             padding: 5px 10px;
             a {
                 @include mixins.flex-center;
@@ -252,12 +251,52 @@ footer {
     }
 }
 
+#education-experience{
+    padding: 1rem 0;
+    @include mixins.flex-center;
+    flex-direction: column;
+    width: 80vw;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .container{
+        @include mixins.flex-center;
+        justify-content: right;
+        gap: 5rem;
+        width: 100%;
+    }
+}
+
+#work-experience{
+    width: 45%;
+}
+
+#education{
+    max-width: 45%;
+}
+
+.education-items, .work-experience-items{
+    border-left: 2px solid #47acff;
+    padding-left: 1rem;
+}
+
+.education-item, .work-experience-item{
+    position: relative;
+    .point{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 8px;
+        left: -25px;
+    }
+}
+
 @media (max-width: variables.$width-desktop) {
 
     #about,
     #projects,
     #contact {
-        width: 80%;
+        width: 80vw;
         height: 90vh;
         justify-content: space-around;
 
@@ -311,7 +350,7 @@ footer {
     #about,
     #projects,
     #contact {
-        width: 90%;
+        width: 90vw;
         height: 70vh;
 
         .right {
@@ -333,6 +372,17 @@ footer {
         }
     }
 
+    #education-experience{
+        .container{
+            width: 80vw;
+            gap: 1rem;
+            flex-direction: column;
+            #education, #work-experience{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: variables.$width-mobile) {

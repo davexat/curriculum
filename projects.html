@@ -11,7 +11,9 @@
 <body>
     <header class="navbar">
         <div class="navbar-brand">
-            <a href="index.html"><h1>David Sandoval</h1></a>
+            <a href="index.html">
+                <h1>David Sandoval</h1>
+            </a>
         </div>
         <nav aria-label="Main navigation">
             <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -25,23 +27,50 @@
         </nav>
     </header>
     <main>
-        <h1>Projects</h1>
-        <section id="project-1">
-            <h2 class="subtitle">Customer Segmentation Dashboard</h2>
-            <h3>Project Overview:</h3>
-            <ul>
-                <li>Customer segmentation for an e-commerce platform using data science techniques.</li>
-                <li>Exploratory analysis and clustering based on behaviors.</li>
-                <li>Interactive Streamlit dashboard to visualize key metrics.</li>
-                <li>Helps compare customer segments and optimize business strategies.</li>
-            </ul>
-            <!--Add image and link-->
-            <a href="#">Visit project</a>
+        <section id="projects">
+            <h1 class="section-title">Projects</h1>
+            <div id="project1" class="project">
+                <h2 class="section-subtitle">Customer Segmentation Dashboard</h2>
+                <h3>Project Overview:</h3>
+                <ul>
+                    <li>Customer segmentation for an e-commerce platform using data science techniques.</li>
+                    <li>Exploratory analysis and clustering based on behaviors.</li>
+                    <li>Interactive Streamlit dashboard to visualize key metrics.</li>
+                    <li>Helps compare customer segments and optimize business strategies.</li>
+                </ul>
+                <!--Add image and link-->
+                <a href="#">Visit project</a>
+            </div>
+            <div id="project2" class="project">
+                <h2 class="section-subtitle">Schedule Combinator</h2>
+                <h3>Project Overview:</h3>
+                <p>Work in progress!!</p>
+            </div>
         </section>
-        <section id="project-2">
-            <h2 class="subtitle">Schedule Combinator</h2>
-            <h3>Project Overview:</h3>
-            <p>Work in progress!!</p>
+        <section id="education-experience">
+            <h1 class="section-title">Education & Experience</h1>
+            <div class="container">
+                <div id="education">
+                    <h2 class="section-subtitle">My Education</h2>
+                    <div class="education-items">
+                        <div class="education-item">
+                            <img src="assets/icons/point.png" class="point">
+                            <h3 class="section-subsubtitle">Software Engineering</h3>
+                            <p class="section-subtext"><strong>ESPOL</strong>|<small>2023 - Current</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="work-experience">
+                    <h2 class="section-subtitle">Work Experience</h2>
+                    <div class="work-experience-items">
+                        <div class="work-experience-item">
+                            <img src="assets/icons/point.png" class="point">
+                            <h3 class="section-subsubtitle">Teaching Assistanship</h3>
+                            <p class="section-subtext"><strong>ESPOL</strong><span class="separator">|</span><small>Sep 2024 - Jan 2025</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>

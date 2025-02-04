@@ -24,8 +24,9 @@
 }
 
 @mixin responsive-text($mobile, $tablet, $desktop, $default) {
-    font-size: $default;
-
+    @media (min-width: 0px) {
+        font-size: $default;
+    }
     @media (max-width: variables.$width-desktop) {
         font-size: $desktop;
     }
@@ -40,7 +41,9 @@
 }
 
 @mixin responsive-padding($mobile, $tablet, $desktop, $default) {
-    padding: $default;
+    @media (min-width: 0px) {
+        padding: $default;
+    }
 
     @media (max-width: variables.$width-desktop) {
         padding: $desktop;

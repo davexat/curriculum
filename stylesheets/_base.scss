@@ -27,7 +27,6 @@
 .principal-title {
     font-family: variables.$font-secondary;
     @include mixins.responsive-text(1.5rem, 1.8rem, 2rem, 2.2vw);
-    margin-bottom: 0.5rem;
 }
 
 .principal-text{
@@ -38,13 +37,26 @@
 .section-title{
     font-family: variables.$font-secondary;
     @include mixins.responsive-text(1.3rem, 1.5rem, 1.6rem, 1.5vw);
-    margin-bottom: 0.8rem;
+}
+
+.section-subtitle{
+    font-family: variables.$font-secondary;
+    @include mixins.responsive-text(1.2rem, 1.4rem, 1.5rem, 1.4vw);
+}
+
+.section-subsubtitle{
+    font-family: variables.$font-secondary;
+    @include mixins.responsive-text(1.1rem, 1.2rem, 1.3rem, 1.2vw);
 }
 
 .section-text {
     font-family: variables.$font-primary;
     @include mixins.responsive-text(1rem, 1.1rem, 1.4rem, 1.3vw);
-    margin-bottom: 0.8rem;
+}
+
+.section-subtext {
+    font-family: variables.$font-primary;
+    @include mixins.responsive-text(1rem, 1.2rem, 1.3rem, 1.2vw);
 }
 
 .section-button{
@@ -56,5 +68,8 @@
 .footer-text {
     font-family: variables.$font-primary;
     @include mixins.responsive-text(0.9rem, 1rem, 1.3rem, 1.2vw);
-    margin-bottom: 0.8rem;
+}
+
+.principal-title, .section-subtitle, .section-subsubtitle, .section-text, .section-subtext, .footer-text {
+    margin-bottom: 1rem;
 }
