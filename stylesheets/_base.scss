@@ -24,17 +24,17 @@
     box-sizing: border-box;
 }
 
-.principal-title {
+.presentation-title {
     font-family: variables.$font-secondary;
     @include mixins.responsive-text(1.5rem, 1.8rem, 2rem, 2.2vw);
 }
 
-.principal-text{
+.presentation-description{
     font-family: variables.$font-primary;
     @include mixins.responsive-text(1.2rem, 1.4rem, 1.6rem, 1.8vw);
 }
 
-.section-title{
+.section-heading{
     font-family: variables.$font-secondary;
     @include mixins.responsive-text(1.3rem, 1.5rem, 1.6rem, 1.5vw);
 }
@@ -49,7 +49,7 @@
     @include mixins.responsive-text(1.1rem, 1.2rem, 1.3rem, 1.2vw);
 }
 
-.section-text {
+.section-paragraph {
     font-family: variables.$font-primary;
     @include mixins.responsive-text(1rem, 1.1rem, 1.4rem, 1.3vw);
 }
@@ -64,7 +64,7 @@
     @include mixins.responsive-text(0.9rem, 1rem, 1.1rem, 1.1vw);
 }
 
-.section-button{
+.section-link{
     font-family: variables.$font-secondary;
     @include mixins.responsive-padding(0.4rem 0.9rem, 0.5rem 1rem, 0.6rem 1.1rem, 0.7rem 1.2rem);
     @include mixins.responsive-text(1rem, 1rem, 1.2rem, 1.1vw);
@@ -75,7 +75,7 @@
     @include mixins.responsive-text(0.9rem, 1rem, 1.3rem, 1.2vw);
 }
 
-.principal-title, .section-subtitle, .section-subsubtitle, .section-text, .section-subtext, .footer-text {
+.presentation-title, .section-subtitle, .section-subsubtitle, .section-paragraph, .section-subtext, .footer-text {
     margin-bottom: 1rem;
 }
 

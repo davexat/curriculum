@@ -26,24 +26,41 @@
         </nav>
     </header>
     <main>
-        <h1>Contact Me</h1>
-        <section id="form">
-            <form>
-                <label for="name">Your name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="topic">Topic:</label>
-                <input type="text" id="topic" name="topic" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+        <section id="contact-container">
+            <h1 class="section-heading">Contact Me</h1>
+            <div class="form-container">
+                <div id="form">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="topic">Topic:</label>
+                            <input type="text" id="topic" name="topic" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div id="map">
+                    <img src="assets/images/sample1.jpg" width="100px" height="100px">
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p class="footer-text">© David Sandoval - 2025</p>
-        <div class="icons">
+        <div class="social-links">
             <div class="social-icon">
                 <a href="https://github.com/davexat"><img src="assets/icons/github.png"></a>
             </div>
