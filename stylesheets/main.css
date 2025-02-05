@@ -1,3 +1,94 @@
+.navbar {
+  min-height: 7vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  font-family: "Open Sans", sans-serif;
+}
+.navbar .navbar-brand a {
+  text-decoration: none;
+}
+.navbar .navbar-brand h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #47acff;
+  font-family: "Poppins", sans-serif;
+}
+.navbar .navbar-toggle {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  right: 1rem;
+}
+.navbar .navbar-toggle .hamburger-icon::before, .navbar .navbar-toggle .hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+.navbar .navbar-toggle .hamburger-icon::before {
+  top: -6px;
+}
+.navbar .navbar-toggle .hamburger-icon::after {
+  top: 6px;
+}
+.navbar .navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar .navbar-links li {
+  margin-left: 1rem;
+}
+.navbar .navbar-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.navbar .navbar-links li a:hover {
+  color: #47acff;
+}
+
+@media (max-width: 769px) {
+  .navbar .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #121212;
+    padding: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .navbar .navbar-links.open {
+    display: flex;
+  }
+  .navbar .navbar-toggle {
+    display: flex;
+  }
+  .navbar .navbar-brand h1 {
+    font-size: 1.2rem;
+  }
+}
 @font-face {
   font-family: "Poppins";
   src: url("../assets/fonts/Poppins-Regular.woff2") format("woff2"), url("../assets/fonts/Poppins-Regular.woff") format("woff");
@@ -396,97 +487,6 @@ footer {
   z-index: -1;
 }
 
-.navbar {
-  min-height: 7vh;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #121212;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  font-family: "Open Sans", sans-serif;
-}
-.navbar .navbar-brand a {
-  text-decoration: none;
-}
-.navbar .navbar-brand h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #47acff;
-  font-family: "Poppins", sans-serif;
-}
-.navbar .navbar-toggle {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  position: relative;
-  right: 1rem;
-}
-.navbar .navbar-toggle .hamburger-icon::before, .navbar .navbar-toggle .hamburger-icon::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 2px;
-  background-color: #ffffff;
-  transition: all 0.3s ease;
-}
-.navbar .navbar-toggle .hamburger-icon::before {
-  top: -6px;
-}
-.navbar .navbar-toggle .hamburger-icon::after {
-  top: 6px;
-}
-.navbar .navbar-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar .navbar-links li {
-  margin-left: 1rem;
-}
-.navbar .navbar-links li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-.navbar .navbar-links li a:hover {
-  color: #47acff;
-}
-
-@media (max-width: 769px) {
-  .navbar .navbar-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #121212;
-    padding: 1rem;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  .navbar .navbar-links.open {
-    display: flex;
-  }
-  .navbar .navbar-toggle {
-    display: flex;
-  }
-  .navbar .navbar-brand h1 {
-    font-size: 1.2rem;
-  }
-}
 #about,
 #projects,
 #contact {
