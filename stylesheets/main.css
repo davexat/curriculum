@@ -535,7 +535,7 @@ footer {
 #contact .section-image img {
   height: 75%;
   width: 75%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .section {
@@ -547,6 +547,11 @@ footer {
 }
 
 #skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
 }
 #skills .tech-list {
@@ -594,17 +599,19 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: right;
-  gap: 5rem;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#work-experience, #education {
+  max-width: 550px;
   width: 100%;
 }
-
-#work-experience {
-  width: 45%;
-}
-
-#education {
-  max-width: 45%;
+@media (max-width: 769px) {
+  #work-experience, #education {
+    max-width: 1000px;
+  }
 }
 
 .education-items,
