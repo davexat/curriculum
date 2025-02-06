@@ -544,6 +544,7 @@ footer {
   padding: 1rem 0;
   justify-content: space-between;
   width: 80vw;
+  max-width: 1500px;
 }
 
 #skills {
