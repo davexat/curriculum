@@ -46,7 +46,7 @@
     align-items: center;
     gap: 1rem;
     text-align: center;
-    
+
     .tech-list {
         @include mixins.flex-center;
         flex-wrap: wrap;
@@ -96,7 +96,8 @@
     }
 }
 
-#work-experience, #education {
+#work-experience,
+#education {
     max-width: 550px;
     width: 100%;
 
@@ -111,8 +112,7 @@
     padding-left: 1rem;
 }
 
-.education-item,
-.work-experience-item {
+.experience-item {
     position: relative;
 
     .point {
@@ -137,7 +137,7 @@
         @include mixins.flex-center;
         flex-wrap: wrap;
         gap: 2rem;
-        
+
         ul {
             text-align: left;
         }
@@ -158,6 +158,13 @@
                 height: 250px;
                 object-fit: cover;
                 border-radius: 7px 7px 0 0;
+            }
+
+            .project-text {
+                display: flex;
+                flex-direction: column;
+                padding: 0 0 0 2rem;
+                gap: 0.5rem;
             }
 
             .project-technologies {
@@ -243,6 +250,7 @@
 }
 
 @media (max-width: variables.$width-tablet) {
+
     #about,
     #projects,
     #contact {

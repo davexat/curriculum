@@ -24,72 +24,67 @@
     box-sizing: border-box;
 }
 
+.presentation-title, .section-heading, .section-subtitle, .section-subsubtitle, .section-paragraph, .section-subtext, .footer-text {
+    margin-bottom: 1rem;
+}
+
 .presentation-title {
     font-family: variables.$font-secondary;
-    @include mixins.responsive-text(1.5rem, 1.8rem, 2rem, 2.2vw);
+    @include mixins.responsive-text(1.6rem, 1.8rem, 2rem, 2.2rem);
 }
 
 .presentation-description{
     font-family: variables.$font-primary;
-    @include mixins.responsive-text(1.2rem, 1.4rem, 1.6rem, 1.8vw);
+    @include mixins.responsive-text(1.2rem, 1.4rem, 1.6rem, 1.8rem);
 }
 
 .section-heading{
     font-family: variables.$font-secondary;
-    @include mixins.responsive-text(1.3rem, 1.5rem, 1.6rem, 1.5vw);
+    @include mixins.responsive-text(1.2rem, 1.4rem, 1.6rem, 1.8rem);
 }
 
 .section-subtitle{
     font-family: variables.$font-secondary;
-    @include mixins.responsive-text(1.2rem, 1.4rem, 1.5rem, 1.4vw);
+    @include mixins.responsive-text(1.1rem, 1.3rem, 1.5rem, 1.7rem);
 }
 
 .section-subsubtitle{
     font-family: variables.$font-secondary;
-    @include mixins.responsive-text(1.1rem, 1.2rem, 1.3rem, 1.2vw);
+    @include mixins.responsive-text(1rem, 1.2rem, 1.4rem, 1.6rem);
 }
 
 .section-paragraph {
     font-family: variables.$font-primary;
-    @include mixins.responsive-text(1rem, 1.1rem, 1.4rem, 1.3vw);
+    @include mixins.responsive-text(0.9rem, 1.1rem, 1.3rem, 1.5rem);
 }
 
 .section-subtext {
     font-family: variables.$font-primary;
-    @include mixins.responsive-text(1rem, 1.2rem, 1.3rem, 1.2vw);
+    @include mixins.responsive-text(0.8rem, 1.0rem, 1.2rem, 1.4rem);
 }
 
 .section-subsubtext {
     font-family: variables.$font-primary;
-    @include mixins.responsive-text(0.9rem, 1rem, 1.1rem, 1.1vw);
+    @include mixins.responsive-text(0.7rem, 0.9rem, 1.1rem, 1.3rem);
 }
 
 .section-link{
     font-family: variables.$font-secondary;
     @include mixins.responsive-padding(0.4rem 0.9rem, 0.5rem 1rem, 0.6rem 1.1rem, 0.7rem 1.2rem);
-    @include mixins.responsive-text(1rem, 1rem, 1.2rem, 1.1vw);
-}
-
-.footer-text {
-    font-family: variables.$font-primary;
-    @include mixins.responsive-text(0.9rem, 1rem, 1.3rem, 1.2vw);
-}
-
-.presentation-title, .section-subtitle, .section-subsubtitle, .section-paragraph, .section-subtext, .footer-text {
-    margin-bottom: 1rem;
+    @include mixins.responsive-text(0.8rem, 1rem, 1.2rem, 1.4rem);
 }
 
 .project-title{
     font-family: variables.$font-secondary;
-    @include mixins.responsive-text(1rem, 1.1rem, 1.2rem, 1.2vw);
+    @include mixins.responsive-text(1rem, 1.1rem, 1.2rem, 1.3rem);
 }
 
-.project-text, .tech-text{
+.project-text, .tech-text, .footer-text{
     font-family: variables.$font-primary;
-    @include mixins.responsive-text(0.8rem, 0.9rem, 1rem, 1vw);
+    @include mixins.responsive-text(0.9rem, 1rem, 1.1rem, 1.2rem);
 }
 
 .project-links, .mini-tech-text{
     font-family: variables.$font-primary;
-    @include mixins.responsive-text(0.7rem, 0.8rem, 0.9rem, 0.9vw);
+    @include mixins.responsive-text(0.8rem, 0.9rem, 1rem, 1.1rem);
 }

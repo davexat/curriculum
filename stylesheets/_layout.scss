@@ -12,6 +12,7 @@ main {
 footer{
     min-height: 10vh;
 }
+
 #presentation {
     position: relative;
     height: 93vh;
@@ -25,6 +26,7 @@ footer{
     overflow: hidden;
 
     .presentation-container {
+        max-width: 1500px;
         width: 80%;
         padding: 0 1rem;
         z-index: 1;
