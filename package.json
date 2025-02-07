@@ -20,9 +20,10 @@
     "sass": "^1.83.4"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "next": "^15.1.6",
     "particlesjs": "^2.2.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }

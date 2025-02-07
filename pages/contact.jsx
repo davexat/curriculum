@@ -4,21 +4,28 @@ import Footer from '../components/Footer';
 import { useState } from 'react';
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [topic, setTopic] = useState('');
-  const [message, setMessage] = useState('');
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    topic: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const data = {
-      name,
-      email,
-      topic,
-      message,
+      ...form
     };
-
+  
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -27,13 +34,10 @@ export default function Contact() {
         },
         body: JSON.stringify(data),
       });
-
+  
       if (response.ok) {
         alert('Message sent successfully!');
-        setName('');
-        setEmail('');
-        setTopic('');
-        setMessage('');
+        setForm({ name: '', email: '', topic: '', message: '' });
       } else {
         alert('Failed to send message.');
       }
@@ -46,9 +50,8 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+        <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
         <title>Contact Me - David Sandoval</title>
       </Head>
 
@@ -69,8 +72,8 @@ export default function Contact() {
                       name="name"
                       autoComplete="name"
                       required
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      value={form.name}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="form-group">
@@ -81,8 +84,8 @@ export default function Contact() {
                       name="email"
                       autoComplete="email"
                       required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      value={form.email}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -93,8 +96,8 @@ export default function Contact() {
                     id="topic"
                     name="topic"
                     required
-                    value={topic}
-                    onChange={(e) => setTopic(e.target.value)}
+                    value={form.topic}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="form-group">
@@ -104,8 +107,8 @@ export default function Contact() {
                     name="message"
                     rows="5"
                     required
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    value={form.message}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
                 <button type="submit">Send</button>

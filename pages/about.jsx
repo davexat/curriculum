@@ -8,7 +8,7 @@ export default function About() {
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+        <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
         <title>About Me - David Sandoval</title>
       </Head>
 

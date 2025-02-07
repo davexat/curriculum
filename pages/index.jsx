@@ -22,7 +22,7 @@ export default function Home() {
         <meta name="author" content="David Sandoval" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+        <meta httpEquiv="Permissions-Policy" content="interest-cohort=()" />
       </Head>
 
       <Navbar />
