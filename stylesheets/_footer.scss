@@ -1,0 +1,13 @@
+@use 'variables';
+@use 'mixins';
+
+footer{
+    background-color: #121212;
+    @include mixins.flex-center;
+    flex-direction: column;
+    padding: 0.7rem;
+
+    p {
+        color: white;
+    }
+}

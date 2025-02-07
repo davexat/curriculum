@@ -1,2 +1,2 @@
-import './navbar.js';
 import './particlesConfig.js';
+import './navbar.js'
