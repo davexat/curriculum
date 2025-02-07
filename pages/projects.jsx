@@ -114,7 +114,8 @@ export default function Projects() {
                   <h3 className="section-paragraph">Teaching Assistant</h3>
                   <p className="section-subtext"><strong>ESPOL</strong><span className="separator">|</span><small>Sep
                     2024 - Jan 2025</small></p>
-                  <p className="section-subsubtext">Assisted students in the Software Design course.</p>
+                    <p className="section-subsubtext">Assisted students in the Software Design course by reviewing and 
+                      grading assignments, providing feedback, and offering support on programming and design principles during office hours.</p>
                 </div>
               </div>
             </div>
