@@ -1,5 +1,8 @@
 import fetch from 'node-fetch';
 
+import { config } from 'dotenv';
+config();
+
 export default async function handler(req, res) {
   const endpoint = process.env.FORMSPREE_ENDPOINT;
 

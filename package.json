@@ -4,9 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:sass": "sass stylesheets/main.scss:stylesheets/main.css",
-    "verbose:sass": "sass --verbose stylesheets/main.scss:stylesheets/main.css",
-    "watch:sass": "sass --watch stylesheets/main.scss:stylesheets/main.css"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:sass": "sass styles/main.scss:styles/main.css",
+    "verbose:sass": "sass --verbose styles/main.scss:styles/main.css",
+    "watch:sass": "sass --watch styles/main.scss:styles/main.css"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +20,9 @@
     "sass": "^1.83.4"
   },
   "dependencies": {
-    "particlesjs": "^2.2.3"
+    "next": "^15.1.6",
+    "particlesjs": "^2.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
