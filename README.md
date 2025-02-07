@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a personal curriculum vitae website built using HTML, CSS, JavaScript, and Sass. It showcases my skills, experience, and projects in a visually appealing and interactive way.
+This project is a personal curriculum vitae website built using Next.js, React, HTML, CSS, JavaScript, and Sass. It showcases my skills, experience, and projects in a visually appealing and interactive way. The main goal is to provide an online platform to present my professional background and skills to potential employers and collaborators.
 
 ## Table of Contents
 
@@ -24,46 +24,61 @@ This project is a personal curriculum vitae website built using HTML, CSS, JavaS
 
 ## Technologies Used
 
-[![Static Badge](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=javascript&logoColor=white&logoSize=auto&labelColor=%23d8c108)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Static Badge](https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=html5&logoColor=white&logoSize=auto&labelColor=%23E34F26)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Static Badge](https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=css&logoColor=white&logoSize=auto&labelColor=%23663399)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Static Badge](https://img.shields.io/badge/Sass-black?style=for-the-badge&logo=sass&logoColor=white&logoSize=auto&labelColor=%23CC6699)](https://sass-lang.com/)
+<a href="https://www.javascript.com/">![Static Badge](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=javascript&logoColor=white&logoSize=auto&labelColor=%23d8c108)</a>
+<a href="https://www.w3.org/html/">![Static Badge](https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=html5&logoColor=white&logoSize=auto&labelColor=%23E34F26)</a>
+<a href="https://www.w3.org/Style/CSS/">![Static Badge](https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=css&logoColor=white&logoSize=auto&labelColor=%23663399)</a>
+<a href="https://sass-lang.com/">![Static Badge](https://img.shields.io/badge/Sass-black?style=for-the-badge&logo=sass&logoColor=white&logoSize=auto&labelColor=%23CC6699)</a>
+<a href="https://react.dev/">![Static Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=white&logoSize=auto&labelColor=%23289ebe)</a>
+<a href="https://nodejs.org/en">![Static Badge](https://img.shields.io/badge/Node.js-black?style=for-the-badge&logo=nodedotjs&logoColor=white&labelColor=%235FA04E)</a>
+<a href="https://nextjs.org/">![Static Badge](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=nextdotjs&logoColor=white&labelColor=%23000000)</a>
 
 ## Project Structure
 
 ```
 curriculum/
-├── index.html                  <- Main page
-├── about.html                  <- About me section
-├── projects.html               <- Projects section
-├── contact.html                <- Contact section
-├── scripts/
-│   ├── index.js                <- Main script for the website
-│   ├── navbar.js               <- Script for the navigation bar
-│   └── particlesConfig.js      <- Configuration for the particles effect
-├── stylesheets/
-│   ├── main.scss               <- Main stylesheet for the website
-│   ├── _base.scss              <- Base styles for the website
-│   ├── _mixins.scss            <- Sass mixins for the website
-│   ├── _variables.scss         <- Sass variables for the website
-│   ├── _contact.scss           <- Styles for the contact section
-│   ├── _navbar.scss            <- Styles for the navigation bar
-│   ├── _sections.scss          <- Styles for the sections
-│   ├── _social-links.scss      <- Styles for the social links
-│   ├── _footer.scss            <- Styles for the footer
-│   ├── _layout.scss            <- Styles for the layout
-│   └── _components.scss        <- Styles for the components
-├── LICENSE                     <- MIT License
-└── README.md                   <- This README file
+├── components/
+│   ├── Footer.jsx                  <- Footer component
+│   ├── Navbar.jsx                  <- Navbar component
+│   └── TechItem.jsx                <- TechItem component
+├── pages/
+│   ├── _app.jsx                    <- Main App component
+│   ├── about.jsx                   <- About page
+│   ├── contact.jsx                 <- Contact page
+│   ├── index.jsx                   <- Home page
+│   └── projects.jsx                <- Projects page
+├── public/
+│   ├── fonts/                      <- Website fonts
+│   ├── icons/                      <- Website icons
+│   ├── images/                     <- Website images
+│   ├── scripts/                    <- Website scripts
+├── styles/
+│   ├── _base.scss                  <- Base styles
+│   ├── _components.scss            <- Components styles
+│   ├── _contact.scss               <- Contact styles
+│   ├── _footer.scss                <- Footer styles
+│   ├── _layout.scss                <- Layout styles
+│   ├── _mixins.scss                <- Sass Mixins for the website
+│   ├── _navbar.scss                <- Navbar styles
+│   ├── _sections.scss              <- Sections styles
+│   ├── _social-links.scss          <- Social links styles
+│   ├── _variables.scss             <- Sass variables for the website
+│   └── main.scss                   <- Main styles
+├── LICENSE                         <- MIT License
+├── README.md                       <- This README file
+└── package.json                    <- Package dependencies
 ```
 
 ## Installation
 
-To view the website locally, simply open the `index.html` file in your web browser.
+To view the website locally, simply run `npm install` and `npm run dev` in your terminal.
 
 ## Usage
 
-Feel free to browse the website.
+Feel free to browse the website. To run the project locally, follow these steps:
+
+1.  Clone the repository: `git clone [repository URL]`
+2.  Install dependencies: `npm install`
+3.  Run the development server: `npm run dev`
 
 ## Contributing
 
