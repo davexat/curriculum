@@ -101,6 +101,7 @@ export default function Projects() {
                   <img src="/icons/point.png" className="point" alt="Point" />
                   <h3 className="section-paragraph">Software Engineering</h3>
                   <p className="section-subtext"><strong>ESPOL</strong>|<small>2023 - Current</small></p>
+                  <p className="section-subsubtext">Contributed to software development projects, extracurricular activities, and hackathons, gaining practical experience in development, data analysis, and teamwork.</p>
                 </div>
               </div>
             </div>
