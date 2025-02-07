@@ -33,6 +33,8 @@ export default function Projects() {
             <TechItem url="https://developer.mozilla.org/en-US/docs/Web/CSS" imageUrl="/icons/techs/css.png" name="CSS" />
             <TechItem url="https://sass-lang.com/" imageUrl="/icons/techs/sass.png" name="Sass" />
             <TechItem url="https://es.react.dev/" imageUrl="/icons/techs/react.png" name="React" />
+            <TechItem url="https://nodejs.org/" imageUrl="/icons/techs/nodejs.png" name="Node.js" />
+            <TechItem url="https://nextjs.org/" imageUrl="/icons/techs/nextjs.png" name="Next.js" />
             <TechItem url="https://git-scm.com/" imageUrl="/icons/techs/git.png" name="Git" />
             <TechItem url="https://github.com/" imageUrl="/icons/techs/github-b.png" name="GitHub" />
             <TechItem url="https://daringfireball.net/projects/markdown/" imageUrl="/icons/techs/markdown.png" name="Markdown" />
@@ -69,16 +71,19 @@ export default function Projects() {
               <img src="/images/curriculum.jpg" className="project-image" alt="Curriculum Vitae Website" />
               <h2 className="project-title">Curriculum Vitae Website</h2>
               <ul className="project-text">
-                <li>Personal website to showcase my skills and projects.</li>
-                <li>Developed using HTML, CSS, and JavaScript.</li>
-                <li>Styled with Sass for maintainability and scalability.</li>
-                <li>Includes sections for about me, projects, and contact information.</li>
+                <li>Portfolio website built with Next.js and React.</li>
+                <li>Showcases my skills, projects, and experience.</li>
+                <li>Styled with Sass for a modern and responsive design.</li>
+                <li>Includes sections for about me, projects, contact, and skills.</li>
               </ul>
               <div className="project-technologies">
                 <TechItem isMini url="https://developer.mozilla.org/es/docs/Web/JavaScript" imageUrl="/icons/techs/javascript.png" name="JavaScript" />
                 <TechItem isMini url="https://developer.mozilla.org/en-US/docs/Web/HTML" imageUrl="/icons/techs/html.png" name="HTML" />
                 <TechItem isMini url="https://developer.mozilla.org/en-US/docs/Web/CSS" imageUrl="/icons/techs/css.png" name="CSS" />
                 <TechItem isMini url="https://sass-lang.com/" imageUrl="/icons/techs/sass.png" name="Sass" />
+                <TechItem isMini url="https://es.react.dev/" imageUrl="/icons/techs/react.png" name="React" />
+                <TechItem isMini url="https://nodejs.org/" imageUrl="/icons/techs/nodejs.png" name="Node.js" />
+                <TechItem isMini url="https://nextjs.org/" imageUrl="/icons/techs/nextjs.png" name="Next.js" />
               </div>
               <div className="project-links">
                 <a href="https://github.com/davexat/curriculum" target="_blank" rel="noopener noreferrer">View code</a>
