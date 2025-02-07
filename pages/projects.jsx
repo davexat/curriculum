@@ -101,7 +101,8 @@ export default function Projects() {
                   <img src="/icons/point.png" className="point" alt="Point" />
                   <h3 className="section-paragraph">Software Engineering</h3>
                   <p className="section-subtext"><strong>ESPOL</strong>|<small>2023 - Current</small></p>
-                  <p className="section-subsubtext">Contributed to software development projects, extracurricular activities, and hackathons, gaining practical experience in development, data analysis, and teamwork.</p>
+                  <p className="section-subsubtext">Contributed to software development projects, extracurricular 
+                    activities, and hackathons, gaining practical experience in development, data analysis, and teamwork.</p>
                 </div>
               </div>
             </div>
@@ -112,7 +113,7 @@ export default function Projects() {
                   <img src="/icons/point.png" className="point" alt="Point" />
                   <h3 className="section-paragraph">Teaching Assistant</h3>
                   <p className="section-subtext"><strong>ESPOL</strong><span className="separator">|</span><small>Sep
-                      2024 - Jan 2025</small></p>
+                    2024 - Jan 2025</small></p>
                   <p className="section-subsubtext">Assisted students in the Software Design course.</p>
                 </div>
               </div>
