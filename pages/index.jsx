@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Head>
         <title>David Sandoval - Curriculum Vitae</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta
           name="keywords"
           content="web development, python, javascript, backend, frontend, programming, software design, software development, software engineering, computer science, engineering"
