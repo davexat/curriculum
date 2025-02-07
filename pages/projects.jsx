@@ -109,7 +109,7 @@ export default function Projects() {
               <div className="work-experience-items">
                 <div className="experience-item">
                   <img src="/icons/point.png" className="point" alt="Point" />
-                  <h3 className="section-paragraph">Teaching Assistanship</h3>
+                  <h3 className="section-paragraph">Teaching Assistant</h3>
                   <p className="section-subtext"><strong>ESPOL</strong><span className="separator">|</span><small>Sep
                       2024 - Jan 2025</small></p>
                   <p className="section-subsubtext">Assisted students in the Software Design course.</p>
