@@ -3,8 +3,19 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import Script from 'next/script';
+import { useEffect } from 'react';
+import particlesConfig from '../public/scripts/particlesConfig';
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.particlesJS) {
+      window.particlesJS(
+        'particles-js',
+        particlesConfig
+      );
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -38,7 +49,6 @@ export default function Home() {
           </div>
           <div id="particles-js">
             <Script src="/scripts/particles.min.js" strategy="beforeInteractive" />
-            <Script src="/scripts/particlesConfig.js" strategy="afterInteractive" />
           </div>
         </section>
         <section id="about" className="section">
