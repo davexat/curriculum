@@ -86,7 +86,7 @@ export default function Projects() {
               </div>
               <div className="project-links">
                 <a href="https://github.com/davexat/curriculum" target="_blank" rel="noopener noreferrer">View code</a>
-                <a href="#" target="_blank" rel="noopener noreferrer">Visit project</a>
+                <a href="https://davexat.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project</a>
               </div>
             </div>
           </div>
