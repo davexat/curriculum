@@ -28,7 +28,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
-          content="Software and Web developer excited about AI"
+          content="Software and Web developer and Data Analyst passionate about AI"
         />
         <meta name="author" content="David Sandoval" />
         <meta name="robots" content="index, follow" />
@@ -44,7 +44,7 @@ export default function Home() {
             <h2 className="presentation-title">DAVID SANDOVAL</h2>
             <p className="presentation-description">
               Hi! I'm David Elias Sandoval Bernitta, a Web and Software
-              Developer and Data Analyst appasionate by AI.
+              Developer and Data Analyst passionate about AI.
             </p>
           </div>
           <div id="particles-js">

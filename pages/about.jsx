@@ -35,6 +35,23 @@ export default function About() {
             discovered my true passion: Software Design, Development, and
             Artificial Intelligence.
           </p>
+          <p className="section-paragraph">
+            In 2023, I began studying Computer Science Engineering at Escuela 
+            Superior Politécnica del Litoral (ESPOL). At the end of my first 
+            semester, I participated in PyWeekend, a university-organized 
+            hackathon for Programming Fundamentals students.
+          </p>
+          <p className="section-paragraph">
+            By mid-2024, I had the opportunity to work as a Teaching Assistant 
+            for the Software Design course, one of the many subjects that have 
+            fascinated me. Later that year, I embarked on a project to join the 
+            Politécnico Artificial Intelligence Club (CIAP) under the mentorship 
+            of Kevin Santana. Thanks to his excellent guidance, my teammate 
+            José Toapanta and I earned the Best Aspiring Team award.
+          </p>
+          <p className="section-paragraph">
+            In 2025... the journey continues! 🚀
+          </p>
         </section>
       </main>
 
