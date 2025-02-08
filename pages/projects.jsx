@@ -99,7 +99,7 @@ export default function Projects() {
               <div className="education-items">
                 <div className="experience-item">
                   <img src="/icons/point.png" className="point" alt="Point" />
-                  <h3 className="section-paragraph">Software Engineering</h3>
+                  <h3 className="section-paragraph">Computer Science Engineering</h3>
                   <p className="section-subtext"><strong>ESPOL</strong>|<small>2023 - Current</small></p>
                   <p className="section-subsubtext">Contributed to software development projects, extracurricular 
                     activities, and hackathons, gaining practical experience in development, data analysis, and teamwork.</p>
