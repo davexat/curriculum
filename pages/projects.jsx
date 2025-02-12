@@ -20,6 +20,7 @@ export default function Projects() {
           <div className="tech-list">
             <TechItem url="https://www.python.org/" imageUrl="/icons/techs/python.png" name="Python" />
             <TechItem url="https://www.mysql.com/" imageUrl="/icons/techs/mysql.png" name="MySQL" />
+            <TechItem url="https://www.postgresql.org/" imageUrl="/icons/techs/postgresql.png" name="PostgreSQL" />
             <TechItem url="https://pandas.pydata.org/" imageUrl="/icons/techs/pandas.png" name="Pandas" />
             <TechItem url="https://numpy.org/" imageUrl="/icons/techs/numpy.png" name="Numpy" />
             <TechItem url="https://jupyter.org/" imageUrl="/icons/techs/jupyter.png" name="Jupyter" />
