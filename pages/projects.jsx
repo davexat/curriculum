@@ -24,6 +24,8 @@ export default function Projects() {
             <TechItem url="https://pandas.pydata.org/" imageUrl="/icons/techs/pandas.png" name="Pandas" />
             <TechItem url="https://numpy.org/" imageUrl="/icons/techs/numpy.png" name="Numpy" />
             <TechItem url="https://jupyter.org/" imageUrl="/icons/techs/jupyter.png" name="Jupyter" />
+            <TechItem url="https://plotly.com/" imageUrl="/icons/techs/plotly.png" name="Plotly" />
+            <TechItem url="https://matplotlib.org/" imageUrl="/icons/techs/matplotlib.png" name="Matplotlib" />
             <TechItem url="https://scikit-learn.org/" imageUrl="/icons/techs/scikitlearn.png" name="ScikitLearn" />
             <TechItem url="https://streamlit.io/" imageUrl="/icons/techs/streamlit.png" name="Streamlit" />
             <TechItem url="https://www.java.com/" imageUrl="/icons/techs/java.png" name="Java" />
@@ -58,6 +60,8 @@ export default function Projects() {
                 <TechItem isMini url="https://pandas.pydata.org/" imageUrl="/icons/techs/pandas.png" name="Pandas" />
                 <TechItem isMini url="https://numpy.org/" imageUrl="/icons/techs/numpy.png" name="Numpy" />
                 <TechItem isMini url="https://jupyter.org/" imageUrl="/icons/techs/jupyter.png" name="Jupyter" />
+                <TechItem isMini url="https://plotly.com/" imageUrl="/icons/techs/plotly.png" name="Plotly" />
+                <TechItem isMini url="https://matplotlib.org/" imageUrl="/icons/techs/matplotlib.png" name="Matplotlib" />
                 <TechItem isMini url="https://scikit-learn.org/" imageUrl="/icons/techs/scikitlearn.png" name="ScikitLearn" />
                 <TechItem isMini url="https://streamlit.io/" imageUrl="/icons/techs/streamlit.png" name="Streamlit" />
                 <TechItem isMini url="https://daringfireball.net/projects/markdown/" imageUrl="/icons/techs/markdown.png" name="Markdown" />
