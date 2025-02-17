@@ -157,9 +157,12 @@
     padding: 1rem;
     img {
         width: 90%;
-        height: 90%;
         object-fit: cover;
         border-radius: 10px;
+
+        @media (max-width: variables.$width-desktop) {
+            width: 50%;
+        }
 
         @media (max-width: variables.$width-tablet) {
             width: 80%;
