@@ -9,112 +9,173 @@
     <meta name="description" content="Software and Web developer and Data Analyst passionate about AI" />
     <meta name="author" content="David Sandoval" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles-v2/main.css">
 </head>
 
 <body>
-    <header>
-        <h1>David Sandoval</h1>
-        <p>Web and Software Developer | Data Analyst</p>
+    <header class="header">
+        <h1 class="header-title">David Sandoval</h1>
+        <nav class="header-nav">
+            <ul class="header-nav-list">
+                <li class="header-nav-item"><a href="#skills">Skills</a></li>
+                <li class="header-nav-item"><a href="#projects">Projects</a></li>
+                <li class="header-nav-item"><a href="#experience">Experience</a></li>
+                <li class="header-nav-item"><a href="#education">Education</a></li>
+                <li class="header-nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><a href="https://www.python.org/"><img src="/icons/techs/python.png" alt="Python"> Python</a></li>
-                <li><a href="https://www.mysql.com/"><img src="/icons/techs/mysql.png" alt="MySQL"> MySQL</a></li>
-                <li><a href="https://www.postgresql.org/"><img src="/icons/techs/postgresql.png" alt="PostgreSQL"> PostgreSQL</a></li>
-                <li><a href="https://pandas.pydata.org/"><img src="/icons/techs/pandas.png" alt="Pandas"> Pandas</a></li>
-                <li><a href="https://numpy.org/"><img src="/icons/techs/numpy.png" alt="Numpy"> Numpy</a></li>
-                <li><a href="https://jupyter.org/"><img src="/icons/techs/jupyter.png" alt="Jupyter"> Jupyter</a></li>
-                <li><a href="https://plotly.com/"><img src="/icons/techs/plotly.png" alt="Plotly"> Plotly</a></li>
-                <li><a href="https://matplotlib.org/"><img src="/icons/techs/matplotlib.png" alt="Matplotlib"> Matplotlib</a></li>
-                <li><a href="https://scikit-learn.org/"><img src="/icons/techs/scikitlearn.png" alt="ScikitLearn"> ScikitLearn</a></li>
-                <li><a href="https://streamlit.io/"><img src="/icons/techs/streamlit.png" alt="Streamlit"> Streamlit</a></li>
-                <li><a href="https://www.java.com/"><img src="/icons/techs/java.png" alt="Java"> Java</a></li>
-                <li><a href="https://junit.org/junit5/"><img src="/icons/techs/junit5.png" alt="JUnit"> JUnit</a></li>
-                <li><a href="https://developer.mozilla.org/es/docs/Web/JavaScript"><img src="/icons/techs/javascript.png" alt="JavaScript"> JavaScript</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="/icons/techs/html.png" alt="HTML"> HTML</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="/icons/techs/css.png" alt="CSS"> CSS</a></li>
-                <li><a href="https://sass-lang.com/"><img src="/icons/techs/sass.png" alt="Sass"> Sass</a></li>
-                <li><a href="https://es.react.dev/"><img src="/icons/techs/react.png" alt="React"> React</a></li>
-                <li><a href="https://nodejs.org/"><img src="/icons/techs/nodejs.png" alt="Node.js"> Node.js</a></li>
-                <li><a href="https://nextjs.org/"><img src="/icons/techs/nextjs.png" alt="Next.js"> Next.js</a></li>
-                <li><a href="https://git-scm.com/"><img src="/icons/techs/git.png" alt="Git"> Git</a></li>
-                <li><a href="https://github.com/"><img src="/icons/techs/github-b.png" alt="GitHub"> GitHub</a></li>
-                <li><a href="https://daringfireball.net/projects/markdown/"><img src="/icons/techs/markdown.png" alt="Markdown"> Markdown</a></li>
-                <li><a href="https://en.cppreference.com/w/c/language"><img src="/icons/techs/c.png" alt="C"> C</a></li>
+        <section class="about">
+            <div id="particles-js"></div>
+            <div class="about-content">
+                <img src="../public/images/sample1.jpg" alt="David Sandoval" class="about-image">
+                <div class="about-text">
+                    <h1 class="about-name">David Sandoval</h1>
+                    <p class="about-description">Software and Web developer and Data Analyst passionate about AI.</p>
+                    <p class="about-description">I enjoy learning new technologies and applying them to solve real-world
+                        problems.</p>
+                </div>
+            </div>
+        </section>
+        <section class="skills">
+            <h2 class="skills-title">Skills</h2>
+            <ul class="skills-list">
+                <li class="skills-list-item"><a href="https://www.python.org/"><img
+                            src="../public/icons/techs/python.png" alt="Python">
+                        Python</a></li>
+                <li class="skills-list-item"><a href="https://www.mysql.com/"><img src="../public/icons/techs/mysql.png"
+                            alt="MySQL"> MySQL</a>
+                </li>
+                <li class="skills-list-item"><a href="https://www.postgresql.org/"><img
+                            src="../public/icons/techs/postgresql.png" alt="PostgreSQL"> PostgreSQL</a></li>
+                <li class="skills-list-item"><a href="https://pandas.pydata.org/"><img
+                            src="../public/icons/techs/pandas.png" alt="Pandas">
+                        Pandas</a></li>
+                <li class="skills-list-item"><a href="https://numpy.org/"><img src="../public/icons/techs/numpy.png"
+                            alt="Numpy"> Numpy</a></li>
+                <li class="skills-list-item"><a href="https://jupyter.org/"><img src="../public/icons/techs/jupyter.png"
+                            alt="Jupyter">
+                        Jupyter</a></li>
+                <li class="skills-list-item"><a href="https://plotly.com/"><img src="../public/icons/techs/plotly.png"
+                            alt="Plotly"> Plotly</a>
+                </li>
+                <li class="skills-list-item"><a href="https://matplotlib.org/"><img
+                            src="../public/icons/techs/matplotlib.png" alt="Matplotlib">
+                        Matplotlib</a></li>
+                <li class="skills-list-item"><a href="https://scikit-learn.org/"><img
+                            src="../public/icons/techs/scikitlearn.png" alt="ScikitLearn"> ScikitLearn</a></li>
+                <li class="skills-list-item"><a href="https://streamlit.io/"><img
+                            src="../public/icons/techs/streamlit.png" alt="Streamlit">
+                        Streamlit</a></li>
+                <li class="skills-list-item"><a href="https://www.java.com/"><img src="../public/icons/techs/java.png"
+                            alt="Java"> Java</a></li>
+                <li class="skills-list-item"><a href="https://junit.org/junit5/"><img
+                            src="../public/icons/techs/junit5.png" alt="JUnit">
+                        JUnit</a></li>
+                <li class="skills-list-item"><a href="https://developer.mozilla.org/es/docs/Web/JavaScript"><img
+                            src="../public/icons/techs/javascript.png" alt="JavaScript"> JavaScript</a></li>
+                <li class="skills-list-item"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img
+                            src="../public/icons/techs/html.png" alt="HTML"> HTML</a></li>
+                <li class="skills-list-item"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img
+                            src="../public/icons/techs/css.png" alt="CSS"> CSS</a></li>
+                <li class="skills-list-item"><a href="https://sass-lang.com/"><img src="../public/icons/techs/sass.png"
+                            alt="Sass"> Sass</a></li>
+                <li class="skills-list-item"><a href="https://es.react.dev/"><img src="../public/icons/techs/react.png"
+                            alt="React"> React</a>
+                </li>
+                <li class="skills-list-item"><a href="https://nodejs.org/"><img src="../public/icons/techs/nodejs.png"
+                            alt="Node.js"> Node.js</a>
+                </li>
+                <li class="skills-list-item"><a href="https://nextjs.org/"><img src="../public/icons/techs/nextjs.png"
+                            alt="Next.js"> Next.js</a>
+                </li>
+                <li class="skills-list-item"><a href="https://git-scm.com/"><img src="../public/icons/techs/git.png"
+                            alt="Git"> Git</a></li>
+                <li class="skills-list-item"><a href="https://github.com/"><img src="../public/icons/techs/github-b.png"
+                            alt="GitHub"> GitHub</a>
+                </li>
+                <li class="skills-list-item"><a href="https://daringfireball.net/projects/markdown/"><img
+                            src="../public/icons/techs/markdown.png" alt="Markdown"> Markdown</a></li>
+                <li class="skills-list-item"><a href="https://en.cppreference.com/w/c/language"><img
+                            src="../public/icons/techs/c.png" alt="C">
+                        C</a></li>
             </ul>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <img src="/images/customer-segmentation.jpg" alt="Customer Segmentation Dashboard">
-                    <h2>Customer Segmentation Dashboard</h2>
-                    <ul>
+        <section class="projects">
+            <h2 class="projects-title">Projects</h2>
+            <ul class="projects-list">
+                <li class="projects-list-item">
+                    <img src="../public/images/customer-segmentation.jpg" alt="Customer Segmentation Dashboard"
+                        class="projects-list-item-image">
+                    <h2 class="projects-list-item-title">Customer Segmentation Dashboard</h2>
+                    <ul class="projects-list-item-details">
                         <li>Customer segmentation for an e-commerce platform using data science techniques.</li>
                         <li>Exploratory analysis and clustering based on behaviors.</li>
                         <li>Interactive Streamlit dashboard to visualize key metrics.</li>
                         <li>Helps compare customer segments and optimize business strategies.</li>
                     </ul>
-                    <div>
-                        <a href="https://github.com/davexat/Customer_Segmentation_Dashboard" target="_blank" rel="noopener noreferrer">View code</a>
-                        <a href="https://github.com/davexat/Customer_Segmentation_Dashboard" target="_blank" rel="noopener noreferrer">Visit project</a>
+                    <div class="projects-list-item-links">
+                        <a href="https://github.com/davexat/Customer_Segmentation_Dashboard" target="_blank"
+                            rel="noopener noreferrer">View code</a>
+                        <a href="https://github.com/davexat/Customer_Segmentation_Dashboard" target="_blank"
+                            rel="noopener noreferrer">Visit project</a>
                     </div>
                 </li>
-                <li>
-                    <img src="/images/curriculum.jpg" alt="Curriculum Vitae Website">
-                    <h2>Curriculum Vitae Website</h2>
-                    <ul>
+                <li class="projects-list-item">
+                    <img src="../public/images/curriculum.jpg" alt="Curriculum Vitae Website"
+                        class="projects-list-item-image">
+                    <h2 class="projects-list-item-title">Curriculum Vitae Website</h2>
+                    <ul class="projects-list-item-details">
                         <li>Portfolio website built with Next.js and React.</li>
                         <li>Showcases my skills, projects, and experience.</li>
                         <li>Styled with Sass for a modern and responsive design.</li>
                         <li>Includes sections for about me, projects, contact, and skills.</li>
                     </ul>
-                    <div>
-                        <a href="https://github.com/davexat/curriculum" target="_blank" rel="noopener noreferrer">View code</a>
-                        <a href="https://davexat.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project</a>
+                    <div class="projects-list-item-links">
+                        <a href="https://github.com/davexat/curriculum" target="_blank" rel="noopener noreferrer">View
+                            code</a>
+                        <a href="https://davexat.vercel.app/" target="_blank" rel="noopener noreferrer">Visit
+                            project</a>
                     </div>
                 </li>
             </ul>
         </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li>
-                    <h3>Teaching Assistant</h3>
-                    <p><strong>ESPOL</strong>|<small>Sep 2024 - Jan 2025</small></p>
-                    <p>Assisted students in the Software Design course by reviewing and grading assignments, providing feedback, and offering support on programming and design principles during office hours.</p>
+        <section class="experience">
+            <h2 class="experience-title">Experience</h2>
+            <ul class="experience-list">
+                <li class="experience-list-item">
+                    <h3 class="experience-list-item-title">Teaching Assistant</h3>
+                    <p class="experience-list-item-details"><strong>ESPOL</strong>|<small>Sep 2024 - Jan 2025</small>
+                    </p>
+                    <p class="experience-list-item-description">Assisted students in the Software Design course by
+                        reviewing and grading assignments, providing
+                        feedback, and offering support on programming and design principles during office hours.</p>
                 </li>
             </ul>
         </section>
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <h3>Computer Science Engineering</h3>
-                    <p><strong>ESPOL</strong>|<small>2023 - Current</small></p>
-                    <p>Contributed to software development projects, extracurricular activities, and hackathons, gaining practical experience in development, data analysis, and teamwork.</p>
+        <section class="education">
+            <h2 class="education-title">Education</h2>
+            <ul class="education-list">
+                <li class="education-list-item">
+                    <h3 class="education-list-item-title">Computer Science Engineering</h3>
+                    <p class="experience-list-item-details"><strong>ESPOL</strong>|<small>2023 - Current</small></p>
+                    <p class="experience-list-item-description">Contributed to software development projects,
+                        extracurricular activities, and hackathons, gaining
+                        practical experience in development, data analysis, and teamwork.</p>
                 </li>
             </ul>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:"></a></p>
+        <section class="contact">
+            <h2 class="contact-title">Contact</h2>
+            <p class="contact-email">Email: <a href="mailto:"></a></p>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <p>&copy; 2023 David Sandoval</p>
     </footer>
+    <script src="../public/scripts/particles.min.js"></script>
+    <script src="../public/scripts/particlesConfig.js"></script>
 </body>
 
 </html>

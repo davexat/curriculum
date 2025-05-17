@@ -1,0 +1,77 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+  background-color: rgba(227, 244, 253, 0.4941176471);
+}
+.header .header-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+}
+.header .header-nav .header-nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+.header .header-nav .header-nav-list .header-nav-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.header .header-nav .header-nav-list .header-nav-item:hover {
+  background-color: rgba(113, 184, 247, 0.5803921569);
+}
+.header .header-nav .header-nav-list .header-nav-item a {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.about {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about .about-content .about-image {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+}
+.about .about-content .about-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=main.css.map */
