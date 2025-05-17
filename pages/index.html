@@ -175,7 +175,17 @@
         <p>&copy; 2023 David Sandoval</p>
     </footer>
     <script src="../public/scripts/particles.min.js"></script>
-    <script src="../public/scripts/particlesConfig.js"></script>
+    <script type="module" src="../public/scripts/particlesConfig.js"></script>
+        <script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (window.scrollY > window.innerHeight * 0.8) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    </script>
 </body>
 
 </html>

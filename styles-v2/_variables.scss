@@ -1,0 +1,25 @@
+$hover-color: #7abdf767;
+$navbar-text: #ffffff;
+$navbar-bg: #000000a2;
+$navbar-bg-scrolled: #000000;
+
+$text-color: #ffffff;
+$background-color: #000;
+
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+$width-mobile: 480px;
+$width-tablet: 769px;
+$width-desktop: 1440px;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    @include flex-center;
+    flex-direction: column;
+}

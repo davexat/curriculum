@@ -1,36 +1,22 @@
-$hover-color: #71b8f794;
-$navbar-text: #ffffff;
-$navbar-bg: #e3f4fd7e;
-$text-color: #ffffff;
-$background-color: #000;
-
-$font-primary: 'Open Sans', sans-serif;
-$font-secondary: 'Poppins', sans-serif;
-
-
-$width-mobile: 480px;
-$width-tablet: 769px;
-$width-desktop: 1440px;
-
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin flex-column {
-    @include flex-center;
-    flex-direction: column;
-}
+@use 'variables';
 
 .about {
     height: 100vh;
     width: 100vw;
-    background-color: $background-color;
-    @include flex-center;
+    @include variables.flex-center;
+
+    #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$background-color;
+        z-index: -1;
+    }
 
     .about-content{
-        @include flex-column;
+        @include variables.flex-column;
         gap: 2rem;
 
         .about-image{
@@ -39,12 +25,12 @@ $width-desktop: 1440px;
             border-radius: 50%;
         }
         .about-text{
-            @include flex-column;
+            @include variables.flex-column;
             text-align: center;
             line-height: 1.5;
-            font-family: $font-secondary;
+            font-family: variables.$font-secondary;
             font-size: 1.5rem;
-            color: $text-color;
+            color: variables.$text-color;
         }
     }
 }

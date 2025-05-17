@@ -1,30 +1,21 @@
-$hover-color: #71b8f794;
-$navbar-text: #ffffff;
-$navbar-bg: #e3f4fd7e;
-
-$font-primary: 'Open Sans', sans-serif;
-$font-secondary: 'Poppins', sans-serif;
-
-$width-mobile: 480px;
-$width-tablet: 769px;
-$width-desktop: 1440px;
+@use 'variables';
 
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    
+    transition: all 0.5s ease;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0px;
-    background-color: $navbar-bg;
+    background-color: variables.$navbar-bg;
 
     .header-title{
-        font-family: $font-primary;
+        font-family: variables.$font-primary;
         font-size: 24px;
-        color: $navbar-text;
+        color: variables.$navbar-text;
     }
     .header-nav{
         .header-nav-list{
@@ -41,16 +32,20 @@ $width-desktop: 1440px;
                 border-radius: 10px;
 
                 &:hover{
-                    background-color: $hover-color;
+                    background-color: variables.$hover-color;
                 }
                 
                 a{
-                    font-family: $font-secondary;
+                    font-family: variables.$font-secondary;
                     font-size: 16px;
                     text-decoration: none;
-                    color: $navbar-text;
+                    color: variables.$navbar-text;
                 }
             }
         }
     }
+}
+.header.scrolled {
+    background-color: variables.$navbar-bg-scrolled;
+    box-shadow: 0 0 2px 2px rgb(0, 0, 0);
 }
