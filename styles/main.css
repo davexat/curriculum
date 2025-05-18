@@ -182,8 +182,8 @@
 .projects .projects-list .projects-list-item {
   border-radius: 5px;
   position: relative;
-  width: 600px;
-  height: 337.5px;
+  width: 480px;
+  height: 270px;
   overflow: hidden;
   display: flex;
   flex-direction: column;

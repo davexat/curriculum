@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a personal curriculum vitae website built using Next.js, React, HTML, CSS, JavaScript, and Sass. It showcases my skills, experience, and projects in a visually appealing and interactive way. The main goal is to provide an online platform to present my professional background and skills to potential employers and collaborators.
+This project is a personal curriculum vitae website built using HTML, CSS, JavaScript, and Sass. It showcases my skills, experience, and projects in a visually appealing and interactive way. The main goal is to provide an online platform to present my professional background and skills to potential employers and collaborators.
 
 ## Table of Contents
 
@@ -28,9 +28,6 @@ This project is a personal curriculum vitae website built using Next.js, React, 
 <a href="https://www.w3.org/html/">![Static Badge](https://img.shields.io/badge/HTML-black?style=for-the-badge&logo=html5&logoColor=white&logoSize=auto&labelColor=%23E34F26)</a>
 <a href="https://www.w3.org/Style/CSS/">![Static Badge](https://img.shields.io/badge/CSS-black?style=for-the-badge&logo=css&logoColor=white&logoSize=auto&labelColor=%23663399)</a>
 <a href="https://sass-lang.com/">![Static Badge](https://img.shields.io/badge/Sass-black?style=for-the-badge&logo=sass&logoColor=white&logoSize=auto&labelColor=%23CC6699)</a>
-<a href="https://react.dev/">![Static Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=white&logoSize=auto&labelColor=%23289ebe)</a>
-<a href="https://nodejs.org/en">![Static Badge](https://img.shields.io/badge/Node.js-black?style=for-the-badge&logo=nodedotjs&logoColor=white&labelColor=%235FA04E)</a>
-<a href="https://nextjs.org/">![Static Badge](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=nextdotjs&logoColor=white&labelColor=%23000000)</a>
 
 ## Project Structure
 
@@ -70,15 +67,16 @@ curriculum/
 
 ## Installation
 
-To view the website locally, simply run `npm install` and `npm run dev` in your terminal.
+To view the website locally, first install the dependencies by running `npm install`. Then, compile the Sass files using the command `npm run build:sass`.
 
 ## Usage
 
 Feel free to browse the website. To run the project locally, follow these steps:
 
-1.  Clone the repository: `git clone [repository URL]`
-2.  Install dependencies: `npm install`
-3.  Run the development server: `npm run dev`
+1.  Clone the repository: `git clone https://github.com/davexat/curriculum`
+2.  First install the dependencies by running `npm install`.
+3.  Then, compile the Sass files using the command `npm run build:sass`.
+4.  Open `pages/index.html` in your browser.
 
 ## Contributing
 
