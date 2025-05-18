@@ -1,6 +1,6 @@
 @use 'variables';
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,30 +12,31 @@
     padding: 10px 0px;
     background-color: variables.$navbar-bg;
 
-    .header-title{
+    .header-title {
         font-family: variables.$font-primary;
         font-size: 24px;
         color: variables.$navbar-text;
     }
-    .header-nav{
-        .header-nav-list{
+
+    .header-nav {
+        .header-nav-list {
             display: flex;
             list-style: none;
             padding: 0;
             margin: 0;
             gap: 20px;
 
-            .header-nav-item{
+            .header-nav-item {
                 cursor: pointer;
                 transition: all 0.3s ease;
                 padding: 10px 15px;
-                border-radius: 10px;
+                border-radius: 5px;
 
-                &:hover{
+                &:hover {
                     background-color: variables.$hover-color;
                 }
-                
-                a{
+
+                a {
                     font-family: variables.$font-secondary;
                     font-size: 16px;
                     text-decoration: none;
@@ -45,6 +46,7 @@
         }
     }
 }
+
 .header.scrolled {
     background-color: variables.$navbar-bg-scrolled;
     box-shadow: 0 0 2px 2px rgb(0, 0, 0);
