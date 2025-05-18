@@ -1,10 +1,20 @@
-@use 'variables';
 @use 'navbar';
-@use 'mixins';
-@use 'base';
-@use 'layout';
-@use 'sections';
-@use 'social-links';
-@use 'footer';
+@use 'about';
+@use 'skills';
+@use 'projects';
+@use 'experience';
 @use 'contact';
-@use 'components';
+@use 'footer';
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+    main{
+        section{
+            border-top: 1px solid black;
+            padding: 2rem 0;
+        }
+    }
+}

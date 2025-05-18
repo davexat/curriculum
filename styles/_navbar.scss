@@ -1,115 +1,54 @@
 @use 'variables';
-@use 'mixins';
 
-.navbar {
-    min-height: 7vh;
-    position: relative;
+.header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: variables.$navbar-bg;
-    color: variables.$navbar-text;
+    transition: all 0.5s ease;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    font-family: variables.$font-primary;
+    padding: 10px 0px;
+    background-color: variables.$navbar-bg;
+    z-index: 100;
+    
+    .header-title {
+        font-family: variables.$font-primary;
+        font-size: 24px;
+        color: variables.$navbar-text;
+    }
 
-    .navbar-brand {
-        a {
-            text-decoration: none;
-        }
-
-        h1 {
-            font-size: 1.5rem;
+    .header-nav {
+        .header-nav-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
             margin: 0;
-            color: variables.$navbar-highlight;
-            font-family: variables.$font-secondary;
-        }
-    }
+            gap: 20px;
 
-    .navbar-toggle {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        position: relative;
-        right: 1rem;
-
-        .hamburger-icon {
-
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                width: 25px;
-                height: 2px;
-                background-color: variables.$navbar-text;
+            .header-nav-item {
+                cursor: pointer;
                 transition: all 0.3s ease;
-            }
-
-            &::before {
-                top: -6px;
-            }
-
-            &::after {
-                top: 6px;
-            }
-        }
-    }
-
-    .navbar-links {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            margin-left: 1rem;
-
-            a {
-                text-decoration: none;
-                color: variables.$navbar-text;
-                font-size: 1rem;
-                transition: color 0.3s;
+                padding: 10px 15px;
+                border-radius: 5px;
 
                 &:hover {
-                    color: variables.$navbar-hover;
+                    background-color: variables.$hover-color;
+                }
+
+                a {
+                    font-family: variables.$font-secondary;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: variables.$navbar-text;
                 }
             }
         }
     }
 }
 
-@media (max-width: variables.$width-tablet) {
-    .navbar {
-        .navbar-links {
-            display: none;
-            width: 100%;
-            flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: variables.$navbar-bg;
-            padding: 1rem;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .navbar-links.active {
-            display: flex;
-        }
-
-        .navbar-toggle {
-            display: flex;
-        }
-
-        .navbar-brand h1 {
-            font-size: 1.2rem;
-        }
-    }
+.header.scrolled {
+    background-color: variables.$navbar-bg-scrolled;
+    box-shadow: 0 0 2px 2px rgb(0, 0, 0);
 }

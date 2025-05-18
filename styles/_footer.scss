@@ -1,13 +1,41 @@
 @use 'variables';
-@use 'mixins';
 
-footer{
-    background-color: #121212;
-    @include mixins.flex-center;
-    flex-direction: column;
-    padding: 0.7rem;
+.footer {
+    @include variables.flex-column;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-family: variables.$font-secondary;
+    background-color: variables.$background-color;
 
-    p {
-        color: white;
+    .footer-title {
+        font-family: variables.$font-primary;
+        color: variables.$white-text;
+    }
+
+    .footer-social {
+        @include variables.flex-center;
+        gap: 1rem;
+        
+        .footer-social-icon {
+            border: 2px solid variables.$white-text;
+            border-radius: 50%;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+            
+            img{
+                width: 1.5rem;
+                height: 1.5rem;
+                object-fit: fill;
+                display: block;
+            }
+
+            &:hover {
+                background-color: variables.$white-text;
+                img {
+                    filter: invert(1);
+                }
+            }
+        }
     }
 }
