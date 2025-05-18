@@ -2,7 +2,6 @@
 
 .skills {
     @include variables.flex-column;
-    padding: 3rem 0 3rem 0;
     flex-wrap: wrap;
     gap: 2rem;
 
