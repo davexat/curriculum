@@ -11,7 +11,8 @@
     align-items: center;
     padding: 10px 0px;
     background-color: variables.$navbar-bg;
-
+    z-index: 100;
+    
     .header-title {
         font-family: variables.$font-primary;
         font-size: 24px;
