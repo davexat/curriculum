@@ -53,7 +53,6 @@ curriculum/
 │   ├── _projects.scss              <- Projects styles
 │   ├── _skills.scss                <- Skills styles
 │   ├── _variables.scss             <- Sass variables for the website
-│   ├── main.css                    <- Main styles
 │   └── main.scss                   <- Main styles
 ```
 

@@ -81,6 +81,7 @@
         .contact-map{
             min-height: 350px;
             @include variables.flex-column;
+            text-align: center;
         }
     }
 }
