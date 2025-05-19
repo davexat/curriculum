@@ -37,8 +37,7 @@ curriculum/
 ├── LICENSE                         <- MIT License
 ├── package.json                    <- Package dependencies
 ├── README.md                       <- This README file
-├── pages/
-│   └── index.html                  <- Home page
+├── index.html                      <- Home page
 ├── public/
 │   ├── fonts/                      <- Website fonts
 │   ├── icons/                      <- Website icons
