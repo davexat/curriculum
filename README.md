@@ -37,12 +37,13 @@ curriculum/
 ├── LICENSE                         <- MIT License
 ├── package.json                    <- Package dependencies
 ├── README.md                       <- This README file
-├── index.html                      <- Home page
 ├── public/
+│   ├── index.html                  <- Home page
 │   ├── fonts/                      <- Website fonts
 │   ├── icons/                      <- Website icons
 │   ├── images/                     <- Website images
-│   └── scripts/                    <- Website scripts
+│   ├── scripts/                    <- Website scripts
+│   └── stylesheets/                <- Website styles
 ├── styles/
 │   ├── _about.scss                 <- About styles
 │   ├── _contact.scss               <- Contact styles
@@ -67,7 +68,7 @@ Feel free to browse the website. To run the project locally, follow these steps:
 1.  Clone the repository: `git clone https://github.com/davexat/curriculum`
 2.  First install the dependencies by running `npm install`.
 3.  Then, compile the Sass files using the command `npm run build:sass`.
-4.  Open `pages/index.html` in your browser.
+4.  Open `public/index.html` in your browser.
 
 ## Contributing
 
