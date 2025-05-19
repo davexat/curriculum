@@ -10,14 +10,13 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-
-    main {
-        section {
-            border-top: 1px solid black;
-            padding: 2rem 0;
-        }
-    }
 }
+
+main>section {
+    border-top: 1px solid black;
+    padding: 2rem 0;
+}
+
 
 html {
     scroll-padding-top: 150px;
