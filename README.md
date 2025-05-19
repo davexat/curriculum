@@ -33,36 +33,28 @@ This project is a personal curriculum vitae website built using HTML, CSS, JavaS
 
 ```
 curriculum/
-├── components/
-│   ├── Footer.jsx                  <- Footer component
-│   ├── Navbar.jsx                  <- Navbar component
-│   └── TechItem.jsx                <- TechItem component
+├── .gitignore
+├── LICENSE                         <- MIT License
+├── package.json                    <- Package dependencies
+├── README.md                       <- This README file
 ├── pages/
-│   ├── _app.jsx                    <- Main App component
-│   ├── about.jsx                   <- About page
-│   ├── contact.jsx                 <- Contact page
-│   ├── index.jsx                   <- Home page
-│   └── projects.jsx                <- Projects page
+│   └── index.html                  <- Home page
 ├── public/
 │   ├── fonts/                      <- Website fonts
 │   ├── icons/                      <- Website icons
 │   ├── images/                     <- Website images
-│   ├── scripts/                    <- Website scripts
+│   └── scripts/                    <- Website scripts
 ├── styles/
-│   ├── _base.scss                  <- Base styles
-│   ├── _components.scss            <- Components styles
+│   ├── _about.scss                 <- About styles
 │   ├── _contact.scss               <- Contact styles
+│   ├── _experience.scss            <- Experience styles
 │   ├── _footer.scss                <- Footer styles
-│   ├── _layout.scss                <- Layout styles
-│   ├── _mixins.scss                <- Sass Mixins for the website
 │   ├── _navbar.scss                <- Navbar styles
-│   ├── _sections.scss              <- Sections styles
-│   ├── _social-links.scss          <- Social links styles
+│   ├── _projects.scss              <- Projects styles
+│   ├── _skills.scss                <- Skills styles
 │   ├── _variables.scss             <- Sass variables for the website
+│   ├── main.css                    <- Main styles
 │   └── main.scss                   <- Main styles
-├── LICENSE                         <- MIT License
-├── README.md                       <- This README file
-└── package.json                    <- Package dependencies
 ```
 
 ## Installation
