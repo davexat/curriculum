@@ -320,7 +320,6 @@
   gap: 0.2rem;
   display: flex;
   flex-direction: column;
-  border: 0;
 }
 .contact .contact-form-map #contact-form .form-group #contact-form-name, .contact .contact-form-map #contact-form .form-group #contact-form-mail, .contact .contact-form-map #contact-form .form-group #contact-form-topic, .contact .contact-form-map #contact-form .form-group #contact-form-submit {
   width: 100%;
