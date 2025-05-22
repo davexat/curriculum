@@ -249,9 +249,10 @@
         <section class="certifications" id="certifications">
             <h2 class="certifications-title">Certifications</h2>
             <div class="certifications-table-container">
-                <table>
+                <table class="certifications-table">
                     <thead>
                         <tr>
+                            <th>Logo</th>
                             <th>Certification</th>
                             <th>Provider</th>
                             <th>Year</th>
@@ -260,22 +261,31 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>
+                                <img src="./icons/datacamp.png" alt="DataCamp" class="certification-logo">
+                            </td>
                             <th scope="row">Associate Data Analyst</th>
                             <td>DataCamp</td>
                             <td>2025</td>
-                            <td><a href='#'>Link</a></td>
+                            <td><a href="#" class="certification-link" title="View certificate">📄</a></td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="./icons/datacamp.png" alt="DataCamp" class="certification-logo">
+                            </td>
                             <th scope="row">Python Data Associate</th>
                             <td>DataCamp</td>
                             <td>2025</td>
-                            <td><a href='#'>Link</a></td>
+                            <td><a href="#" class="certification-link" title="View certificate">📄</a></td>
                         </tr>
                         <tr>
+                            <td>
+                                <img src="./icons/datacamp.png" alt="DataCamp" class="certification-logo">
+                            </td>
                             <th scope="row">SQL Associate</th>
                             <td>DataCamp</td>
                             <td>2025</td>
-                            <td><a href='#'>Link</a></td>
+                            <td><a href="#" class="certification-link" title="View certificate">📄</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -283,13 +293,11 @@
         </section>
         <section id="favorite-courses">
             <h2>Favorite Courses</h2>
-
             <article>
                 <header>
                     <h3>[Course Title]</h3>
                 </header>
                 <figure>
-                    <!-- Replace the src URL with your YouTube embed link -->
                     <iframe width="560" height="315" src="[YouTube Embed URL]" title="[Video Title]" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
