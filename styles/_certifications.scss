@@ -10,26 +10,22 @@
     >.certifications-table-container {
         >.certifications-table {
             border: 1px solid variables.$black-text;
-            border-radius: 0.5rem;
+            border-radius: 0.25rem;
             overflow: hidden;
             border-collapse: separate;
             border-spacing: 0;
             width: 100%;
             background: #fff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 
-            thead th {
+            thead>tr>th {
+                text-align: center;
                 background: variables.$primary-color;
                 color: #fff;
                 font-weight: bold;
             }
 
-            thead>tr {
-                text-align: center;
-            }
-
             tbody>tr {
-                text-align: left;
                 transition: background 0.2s;
                 &:nth-child(even) {
                     background: #f7f7f9;
@@ -37,10 +33,12 @@
                 &:hover {
                     background: #e6f0fa;
                 }
+                td:first-child {
+                    text-align: center;
+                }
             }
 
-            th,
-            td {
+            th,td {
                 padding: 0.75rem 1.5rem;
                 border-bottom: 1px solid #e0e0e0;
                 vertical-align: middle;
@@ -48,8 +46,7 @@
                 box-sizing: border-box;
             }
 
-            th:first-child,
-            td:first-child {
+            td:last-child {
                 text-align: center;
             }
 
@@ -57,11 +54,10 @@
                 width: 32px;
                 height: 32px;
                 object-fit: contain;
-                display: inline-block;
                 vertical-align: middle;
                 border-radius: 0.25rem;
                 background: #fff;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
             }
 
             td a,
@@ -70,8 +66,9 @@
                 text-decoration: none;
                 font-size: 1.35rem;
                 transition: color 0.2s;
+
                 &:hover {
-                    color: darken(variables.$primary-color, 10%);
+                    color: variables.$hover-color;
                 }
             }
 

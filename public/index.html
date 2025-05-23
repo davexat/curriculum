@@ -13,17 +13,14 @@
 </head>
 
 <body>
-    <header class="header">
-        <h1 class="header-title">David Sandoval</h1>
-        <nav class="header-nav">
-            <ul class="header-nav-list">
-                <li class="header-nav-item"><a href="#skills">Skills</a></li>
-                <li class="header-nav-item"><a href="#projects">Projects</a></li>
-                <li class="header-nav-item"><a href="#experience">Experience</a></li>
-                <li class="header-nav-item"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navegation">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#skills">Skills</a></li>
+            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><a href="#experience">Experience</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <main>
         <section class="about">
             <div id="particles-js"></div>
@@ -38,7 +35,7 @@
             </div>
         </section>
         <section class="skills">
-            <h2 class="skills-title" id="skills">Skills</h2>
+            <h2 class="title" id="skills">Skills</h2>
             <div class="skills-groups">
                 <article class="skills-group" id="skills1">
                     <h3 class="skills-subtitle">Data Analysis</h3>
@@ -120,7 +117,7 @@
             </div>
         </section>
         <section class="projects">
-            <h2 class="projects-title" id="projects">Projects</h2>
+            <h2 class="title" id="projects">Projects</h2>
             <ul class="projects-list">
                 <li class="projects-list-item">
                     <img src="./images/customer-segmentation.jpg" alt="Customer Segmentation Dashboard"
@@ -182,7 +179,7 @@
             </ul>
         </section>
         <section id="references" class="references">
-            <h2 class="references-title">References</h2>
+            <h2 class="title">References</h2>
             <div class="references-list">
                 <article class="references-list-item">
                     <figure class="reference-figure">
@@ -233,7 +230,7 @@
             </div>
         </section>
         <section class="experience">
-            <h2 class="experience-title" id="experience">Education & Experience</h2>
+            <h2 class="title" id="experience">Education & Experience</h2>
             <div class="experience-groups">
                 <div class="experience-group">
                     <h3 class="experience-subtitle">Experience</h3>
@@ -284,7 +281,7 @@
             </div>
         </section>
         <section class="certifications" id="certifications">
-            <h2 class="certifications-title">Certifications</h2>
+            <h2 class="title">Certifications</h2>
             <div class="certifications-table-container">
                 <table class="certifications-table">
                     <thead>
@@ -329,7 +326,7 @@
             </div>
         </section>
         <section id="favorite-courses">
-            <h2>Favorite Courses</h2>
+            <h2 class="title">Favorite Courses</h2>
             <article>
                 <header>
                     <h3>[Course Title]</h3>
@@ -345,7 +342,7 @@
             </article>
         </section>
         <section class="contact" id="contact">
-            <h2 class="contact-title">Contact Me</h2>
+            <h2 class="title">Contact Me</h2>
             <div class="contact-form-map">
                 <section class="contact-form" aria-labelledby="form-heading">
                     <h4 id="form-heading">Send me an email!</h4>
@@ -401,11 +398,11 @@
     <script type="module" src="./scripts/particlesConfig.js"></script>
     <script>
         window.addEventListener('scroll', function () {
-            const header = document.querySelector('.header');
+            const nav = document.querySelector('.navegation');
             if (window.scrollY > window.innerHeight * 0.8) {
-                header.classList.add('scrolled');
+                nav.classList.add('scrolled');
             } else {
-                header.classList.remove('scrolled');
+                nav.classList.remove('scrolled');
             }
         });
     </script>

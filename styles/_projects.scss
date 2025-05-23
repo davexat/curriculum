@@ -6,12 +6,6 @@
     gap: 2rem;
     font-family: variables.$font-secondary;
 
-    .projects-title {
-        font-family: variables.$font-primary;
-        font-size: 1.5rem;
-        color: variables.$black-text;
-    }
-
     .projects-list{
         @include variables.flex-center;
         list-style: none;

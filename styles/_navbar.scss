@@ -1,54 +1,46 @@
 @use 'variables';
 
-.header {
+.navegation {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     transition: all 0.5s ease;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0px;
+    @include variables.flex-column;
     background-color: variables.$navbar-bg;
+    padding: 2px 0px;
     z-index: 100;
-    
-    .header-title {
-        font-family: variables.$font-primary;
-        font-size: 24px;
-        color: variables.$navbar-text;
-    }
 
-    .header-nav {
-        .header-nav-list {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            gap: 20px;
+    >.nav-list {
+        @include variables.flex-center;
+        gap: 2rem;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-            .header-nav-item {
-                cursor: pointer;
-                transition: all 0.3s ease;
-                padding: 10px 15px;
-                border-radius: 5px;
+        .nav-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
 
-                &:hover {
-                    background-color: variables.$hover-color;
-                }
+            &:hover {
+                background-color: variables.$hover-color;
+            }
 
-                a {
-                    font-family: variables.$font-secondary;
-                    font-size: 16px;
-                    text-decoration: none;
-                    color: variables.$navbar-text;
-                }
+            >a {
+                text-align: center;
+                font-family: variables.$font-secondary;
+                font-size: 1.1rem;
+                text-decoration: none;
+                color: variables.$navbar-text;
             }
         }
     }
 }
 
-.header.scrolled {
+.navegation.scrolled {
     background-color: variables.$navbar-bg-scrolled;
-    box-shadow: 0 0 2px 2px rgb(0, 0, 0);
+    box-shadow: 0 0 2px 2px variables.$navbar-bg-scrolled;
 }
