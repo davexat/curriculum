@@ -1,7 +1,7 @@
 $hover-color: #2a3950;
 $navbar-text: #ffffff;
-$navbar-bg: #23272f93;
-$navbar-bg-scrolled: #181b20;
+$navbar-bg: #050505c5;
+$navbar-bg-scrolled: #0e0e0f;
 
 $white-text: #ffffff;
 $black-text: #181b20;
@@ -11,11 +11,12 @@ $tech-color: #e5e7eb;
 $tech-color-hover: #cbd5e1;
 
 $marker-color: #223a5e;
-
 $primary-color: #223a5e;
-
 $button-color: #223a5e;
 $button-color-hover: #1a2c47;
+
+$section-bg-odd: #f5f5f5;
+$section-bg-even: #fcfcfc;
 
 $font-primary: 'Open Sans', sans-serif;
 $font-secondary: 'Poppins', sans-serif;
@@ -23,6 +24,8 @@ $font-secondary: 'Poppins', sans-serif;
 $width-mobile: 480px;
 $width-tablet: 769px;
 $width-desktop: 1440px;
+
+$accent-bg: #e3f0ff;
 
 @mixin flex-center {
     display: flex;

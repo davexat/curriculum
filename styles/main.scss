@@ -1,5 +1,5 @@
 @use 'navbar';
-@use 'about';
+@use 'header';
 @use 'skills';
 @use 'projects';
 @use 'references';
@@ -16,12 +16,38 @@
 }
 
 main {
+    position: relative;
     @include variables.flex-column;
+    background: linear-gradient(0deg, 
+    variables.$background-color 0%, 
+    rgb(29, 29, 61) 50%, 
+    rgb(38, 34, 54) 100%);
 
     >section {
-        border-top: 1px solid black;
-        padding: 2rem 0;
+        padding: 5rem;
         width: 80%;
+
+        >.title {
+            margin-bottom: 2rem;
+        }
+    }
+
+    >:first-child {
+        border-radius: 0.5rem 1rem 0 0;
+        margin-top: 3rem;
+    }
+
+    >:last-child {
+        border-radius: 0 0 1rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    >:nth-child(odd) {
+        background-color: variables.$section-bg-odd;
+    }
+
+    >:nth-child(even) {
+        background-color: variables.$section-bg-even;
     }
 }
 

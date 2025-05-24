@@ -67,4 +67,30 @@
             }
         }
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: calc(10.2vw);
+        width: 200px;
+        height: 30px;
+        background: variables.$section-bg-odd;
+        clip-path: path('M 100 0 L 160 0 C 180 2.5 175 21 200 25 L 0 25 C 25 21 20 2.5 40 0 z');
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 5px;
+        background: variables.$primary-color;
+        border-radius: 0 0 5px 5px;
+        top: 25px;
+        left: calc(10.2vw + 50px);
+    }
+
+    &:hover::after {
+        background: variables.$tech-color-hover;
+    }
 }

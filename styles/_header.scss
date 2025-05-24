@@ -1,0 +1,40 @@
+@use 'variables';
+
+.about {
+    height: 100vh;
+    width: 100%;
+    @include variables.flex-column;
+
+    >#particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: variables.$background-color;
+    }
+
+    >.about-image {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+    }
+
+    >.about-name,
+    >.about-description {
+        font-family: variables.$font-secondary;
+        text-align: center;
+        color: variables.$white-text;
+        line-height: 1.5;
+    }
+
+    >.about-name {
+        font-size: 2.2rem;
+    }
+
+    >.about-description {
+        font-size: 1.5rem;
+    }
+}
