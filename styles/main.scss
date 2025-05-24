@@ -5,6 +5,7 @@
 @use 'references';
 @use 'experience';
 @use 'certifications';
+@use 'courses';
 @use 'contact';
 @use 'footer';
 @use 'variables';
@@ -50,7 +51,6 @@ main {
         background-color: variables.$section-bg-even;
     }
 }
-
 
 html {
     scroll-padding-top: 150px;
