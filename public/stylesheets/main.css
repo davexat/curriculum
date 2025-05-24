@@ -555,7 +555,10 @@
 }
 .contact .contact-form-map #contact-form .form-group #contact-form-message {
   width: 100%;
-  height: 10rem;
+  height: 17rem;
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  resize: none;
 }
 .contact .contact-form-map #contact-form #form-name, .contact .contact-form-map #contact-form #form-mail {
   flex: 1 0 200px;
