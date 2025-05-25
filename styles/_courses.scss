@@ -11,52 +11,59 @@
         flex-wrap: wrap;
         gap: 2rem;
 
-        > article {
-        background: variables.$tech-color;
-        border: 1px solid variables.$tech-color-hover;
-        border-radius: 0.25rem;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        padding: 1.5rem 1rem 1rem 1rem;
-        max-width: 400px;
-        width: 100%;
-        @include variables.flex-column;
-        gap: 1rem;
-
-        h3 {
-            font-family: variables.$font-primary;
-            color: variables.$black-text;
-            text-align: center;
-        }
-
-        figure {
-            @include variables.flex-column;
-            gap: 0.7rem;
+        >article {
+            background: variables.$tech-color;
+            border: 1px solid variables.$tech-color-hover;
+            border-radius: 0.25rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem 1rem 1rem 1rem;
+            max-width: 400px;
             width: 100%;
+            @include variables.flex-column;
+            gap: 1rem;
 
-            iframe {
-                width: 100%;
-                max-width: 400px;
-                min-height: 225px;
-                border-radius: 0.25rem;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-                background: variables.$tech-color;
+            h3 {
+                font-family: variables.$font-primary;
+                color: variables.$black-text;
+                text-align: center;
             }
 
-            figcaption {
-                color: variables.$marker-color;
-                text-align: center;
+            figure {
+                @include variables.flex-column;
+                gap: 0.7rem;
+                width: 100%;
 
-                a {
-                    color: variables.$primary-color;
-                    text-decoration: none;
-                    &:hover {
-                        color: variables.$hover-color;
-                        text-decoration: underline;
+                iframe {
+                    width: 100%;
+                    max-width: 400px;
+                    min-height: 225px;
+                    border-radius: 0.25rem;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+                    background: variables.$tech-color;
+                }
+
+                figcaption {
+                    color: variables.$marker-color;
+                    text-align: center;
+
+                    a {
+                        color: variables.$primary-color;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: variables.$hover-color;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
+
+            &:hover {
+                box-shadow: 0 4px 16px rgba(34, 58, 94, 0.13);
+                border-color: variables.$primary-color;
+                background-color: variables.$project-color-hover;
+            }
         }
-    }
     }
 
     @media (max-width: 700px) {
@@ -64,6 +71,7 @@
             padding: 1rem 0.5rem;
             max-width: 100%;
         }
+
         figure iframe {
             min-height: 180px;
         }
