@@ -123,14 +123,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.skills .skills-list .skills-list-item a {
   width: 7rem;
   height: 7rem;
-  background-color: #e5e7eb;
-  padding: 5px 10px;
   border-radius: 5px;
+  background-color: #e5e7eb;
   transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.7);
+}
+.skills .skills-list .skills-list-item a {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +150,7 @@
   width: 2.5rem;
   height: 2.5rem;
 }
-.skills .skills-list .skills-list-item a:hover {
+.skills .skills-list .skills-list-item:hover {
   background-color: #cbd5e1;
 }
 .skills::before {
