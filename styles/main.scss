@@ -21,8 +21,8 @@ main {
     @include variables.flex-column;
     background: linear-gradient(0deg, 
     variables.$background-color 0%, 
-    rgb(29, 29, 61) 50%, 
-    rgb(38, 34, 54) 100%);
+    rgb(14, 18, 29) 50%, 
+    rgb(27, 31, 43) 100%);
 
     >section {
         padding: 5rem;
@@ -53,7 +53,7 @@ main {
 }
 
 html {
-    scroll-padding-top: 150px;
+    scroll-padding-top: 10vh;
 }
 
 .title {

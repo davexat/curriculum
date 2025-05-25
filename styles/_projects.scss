@@ -60,9 +60,13 @@
                         color: white;
                         text-decoration: none;
                         transition: all 0.3s ease;
+                        background-color: variables.$button-color;
+                        padding: 0.25rem 1.5rem;
+                        border-radius: 0.5rem;
 
                         &:hover{
-                            color: variables.$hover-color;
+                            color: variables.$tech-color;
+                            background-color: variables.$button-color-hover;
                         }
                     }
                 }

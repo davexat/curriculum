@@ -2,7 +2,7 @@
 
 .footer {
     @include variables.flex-column;
-    padding: 1rem 0;
+    padding: 1rem 0 2rem 0;
     flex-wrap: wrap;
     gap: 1rem;
     font-family: variables.$font-secondary;
