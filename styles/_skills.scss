@@ -42,15 +42,13 @@
         .skills-list-item {
             @include variables.flex-center;
             width: 7rem;
-                height: 7rem;
+            height: 7rem;
             border-radius: 5px;
             background-color: variables.$tech-color;
-                transition: all 0.3s ease;
+            transition: all 0.3s ease;
             overflow: hidden;
-
-            box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.7);
--webkit-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.7);
--moz-box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.7);
+            border: 1px solid variables.$tech-color-hover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 
             a {
                 width: 100%;
@@ -67,9 +65,12 @@
                     height: 2.5rem;
                 }
             }
+
             &:hover {
-                    background-color: variables.$tech-color-hover;
-                }
+                background-color: variables.$tech-color-hover;
+                border: 1px solid variables.$primary-color;
+                box-shadow: 0 4px 16px rgba(34, 58, 94, 0.13);
+            }
         }
     }
 

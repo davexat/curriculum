@@ -129,9 +129,8 @@
   background-color: #e5e7eb;
   transition: all 0.3s ease;
   overflow: hidden;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.7);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 .skills .skills-list .skills-list-item a {
   width: 100%;
@@ -152,6 +151,8 @@
 }
 .skills .skills-list .skills-list-item:hover {
   background-color: #cbd5e1;
+  border: 1px solid #223a5e;
+  box-shadow: 0 4px 16px rgba(34, 58, 94, 0.13);
 }
 .skills::before {
   content: "";
@@ -277,6 +278,13 @@
   text-align: center;
   gap: 1rem;
 }
+.references .references-list-item:hover {
+  box-shadow: 0 4px 16px rgba(34, 58, 94, 0.13);
+  border-color: #223a5e;
+}
+.references .references-list-item:hover img {
+  filter: brightness(1.08);
+}
 .references .reference-figure {
   display: flex;
   flex-direction: column;
@@ -290,12 +298,18 @@
   object-fit: cover;
   background: #e5e7eb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border: 2px solid #223a5e;
 }
 .references .reference-quote {
   font-style: italic;
   color: #223a5e;
   font-size: 1.1rem;
   margin: 0.5rem 0;
+}
+.references .reference-quote p::before {
+  content: '"';
+  color: #3681d8;
+  font-size: 1.5rem;
 }
 .references .reference-details {
   display: flex;
