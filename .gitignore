@@ -34,3 +34,6 @@ out/
 # Source Maps
 *.map
 public/css/*.map
+
+#Other
+.vscode/
