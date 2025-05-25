@@ -303,9 +303,6 @@
   border-color: #223a5e;
   background-color: #e7e7eb;
 }
-.references .references-list-item:hover img {
-  filter: brightness(1.08);
-}
 .references .reference-figure {
   display: flex;
   flex-direction: column;
