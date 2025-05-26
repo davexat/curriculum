@@ -31,6 +31,11 @@ main {
         >.title {
             margin-bottom: 2rem;
         }
+
+        @media (max-width: variables.$width-tablet) {
+            padding: 3rem;
+            width: 90%;
+        }
     }
 
     >:first-child {
