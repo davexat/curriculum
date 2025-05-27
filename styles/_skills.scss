@@ -3,7 +3,6 @@
 .skills {
     @include variables.flex-column;
     flex-wrap: wrap;
-    gap: 2rem;
 
     .skills-groups {
         max-width: 1300px;

@@ -7,20 +7,12 @@
     flex-wrap: wrap;
 
     > h2 {
-        flex: 1 0 100%;
+        flex: 1 1 100%;
     }
 
     gap: 2rem;
     font-family: variables.$font-secondary;
     text-align: center;
-
-    // .references-list {
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 1fr);
-    //     gap: 2rem;
-    //     width: 100%;
-    //     max-width: 1300px;
-    // }
 
     > .references-list-item {
         flex: 1 0 300px;
@@ -34,6 +26,7 @@
         border: 1px solid variables.$tech-color-hover;
         border-radius: 0.75rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        
         padding: 2rem 1.5rem;
 
         &:hover {

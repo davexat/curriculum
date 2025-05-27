@@ -2,7 +2,6 @@
 
 .favorite-courses {
     @include variables.flex-column;
-    gap: 2rem;
     font-family: variables.$font-secondary;
 
     .favorite-courses-list {
@@ -12,10 +11,12 @@
         gap: 2rem;
 
         >article {
-            background: variables.$tech-color;
+            transition: all 0.3s ease;
+            background-color: variables.$project-color;
             border: 1px solid variables.$tech-color-hover;
-            border-radius: 0.25rem;
+            border-radius: 0.75rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
             padding: 1.5rem 1rem 1rem 1rem;
             max-width: 400px;
             width: 100%;

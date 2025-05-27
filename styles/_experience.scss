@@ -3,7 +3,6 @@
 .experience {
     @include variables.flex-column;
     flex-wrap: wrap;
-    gap: 2rem;
     font-family: variables.$font-secondary;
 
     .experience-groups {

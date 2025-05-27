@@ -1,80 +1,126 @@
 @use 'variables';
 
 .certifications {
-    @include variables.flex-column;
+    @include variables.flex-center;
     flex-wrap: wrap;
-    gap: 2rem;
     font-family: variables.$font-secondary;
 
-    >.certifications-table-container {
-        >.certifications-table {
-            border: 1px solid variables.$black-text;
+    >h2 {
+        flex: 1 1 100%;
+    }
+
+    >.table-container{
+        overflow-x: auto;
+        max-width: 100%;
+    }
+
+    .certifications-table {
+        flex: 1 1 40%;
+
+        border: 1px solid variables.$black-text;
+        border-radius: 0.25rem;
+        overflow: hidden;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+        thead>tr>th {
+            text-align: center;
+            background: variables.$primary-color;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        tbody>tr {
+            transition: background 0.2s;
+
+            &:nth-child(even) {
+                background: #f7f7f9;
+            }
+
+            &:hover {
+                background: #e6f0fa;
+            }
+
+            td:first-child {
+                text-align: center;
+            }
+        }
+
+        th,
+        td {
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: middle;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        td:last-child {
+            text-align: center;
+        }
+
+        .certification-logo {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            vertical-align: middle;
             border-radius: 0.25rem;
-            overflow: hidden;
-            border-collapse: separate;
-            border-spacing: 0;
-            width: 100%;
             background: #fff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        }
 
-            thead>tr>th {
-                text-align: center;
-                background: variables.$primary-color;
-                color: #fff;
-                font-weight: bold;
+        td a,
+        .certification-link {
+            color: variables.$primary-color;
+            text-decoration: none;
+            font-size: 1.35rem;
+            transition: color 0.2s;
+
+            &:hover {
+                color: variables.$hover-color;
             }
+        }
 
-            tbody>tr {
-                transition: background 0.2s;
-                &:nth-child(even) {
-                    background: #f7f7f9;
-                }
-                &:hover {
-                    background: #e6f0fa;
-                }
-                td:first-child {
-                    text-align: center;
-                }
+        tbody tr:last-child td,
+        tbody tr:last-child th {
+            border-bottom: none;
+        }
+
+        @media (max-width: variables.$width-desktop) {
+            font-size: 0.9rem;
+            th,
+            td {
+                padding: 0.6rem 1.2rem;
             }
+        }
 
-            th,td {
-                padding: 0.75rem 1.5rem;
-                border-bottom: 1px solid #e0e0e0;
-                vertical-align: middle;
-                text-align: left;
-                box-sizing: border-box;
-            }
-
-            td:last-child {
-                text-align: center;
+        @media (max-width: variables.$width-tablet) {
+            font-size: 0.8rem;
+            th,
+            td {
+                padding: 0.5rem 1rem;
             }
 
             .certification-logo {
-                width: 32px;
-                height: 32px;
-                object-fit: contain;
-                vertical-align: middle;
-                border-radius: 0.25rem;
-                background: #fff;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @media (max-width: variables.$width-mobile) {
+            font-size: 0.7rem;
+            th,
+            td {
+                padding: 0.4rem 0.8rem;
             }
 
-            td a,
-            .certification-link {
-                color: variables.$primary-color;
-                text-decoration: none;
-                font-size: 1.35rem;
-                transition: color 0.2s;
-
-                &:hover {
-                    color: variables.$hover-color;
-                }
-            }
-
-            tbody tr:last-child td,
-            tbody tr:last-child th {
-                border-bottom: none;
+            .certification-logo {
+                width: 20px;
+                height: 20px;
             }
         }
     }
+
 }

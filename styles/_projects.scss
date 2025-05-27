@@ -3,7 +3,6 @@
 .projects {
     @include variables.flex-column;
     flex-wrap: wrap;
-    gap: 2rem;
     font-family: variables.$font-secondary;
 
     .projects-list{

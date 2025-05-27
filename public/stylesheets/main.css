@@ -164,7 +164,6 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 .skills .skills-groups {
   max-width: 1300px;
@@ -261,7 +260,6 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 2rem;
   font-family: "Poppins", sans-serif;
 }
 .projects .projects-list {
@@ -342,7 +340,7 @@
   text-align: center;
 }
 .references > h2 {
-  flex: 1 0 100%;
+  flex: 1 1 100%;
 }
 .references > .references-list-item {
   flex: 1 0 300px;
@@ -413,7 +411,6 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 2rem;
   font-family: "Poppins", sans-serif;
 }
 .experience .experience-groups {
@@ -449,50 +446,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   flex-wrap: wrap;
-  gap: 2rem;
   font-family: "Poppins", sans-serif;
 }
-.certifications > .certifications-table-container > .certifications-table {
+.certifications > h2 {
+  flex: 1 1 100%;
+}
+.certifications > .table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.certifications .certifications-table {
+  flex: 1 1 40%;
   border: 1px solid #181b20;
   border-radius: 0.25rem;
   overflow: hidden;
   border-collapse: separate;
   border-spacing: 0;
-  width: 100%;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
-.certifications > .certifications-table-container > .certifications-table thead > tr > th {
+.certifications .certifications-table thead > tr > th {
   text-align: center;
   background: #223a5e;
   color: #fff;
   font-weight: bold;
 }
-.certifications > .certifications-table-container > .certifications-table tbody > tr {
+.certifications .certifications-table tbody > tr {
   transition: background 0.2s;
 }
-.certifications > .certifications-table-container > .certifications-table tbody > tr:nth-child(even) {
+.certifications .certifications-table tbody > tr:nth-child(even) {
   background: #f7f7f9;
 }
-.certifications > .certifications-table-container > .certifications-table tbody > tr:hover {
+.certifications .certifications-table tbody > tr:hover {
   background: #e6f0fa;
 }
-.certifications > .certifications-table-container > .certifications-table tbody > tr td:first-child {
+.certifications .certifications-table tbody > tr td:first-child {
   text-align: center;
 }
-.certifications > .certifications-table-container > .certifications-table th, .certifications > .certifications-table-container > .certifications-table td {
+.certifications .certifications-table th,
+.certifications .certifications-table td {
   padding: 0.75rem 1.5rem;
   border-bottom: 1px solid #e0e0e0;
   vertical-align: middle;
   text-align: left;
   box-sizing: border-box;
 }
-.certifications > .certifications-table-container > .certifications-table td:last-child {
+.certifications .certifications-table td:last-child {
   text-align: center;
 }
-.certifications > .certifications-table-container > .certifications-table .certification-logo {
+.certifications .certifications-table .certification-logo {
   width: 32px;
   height: 32px;
   object-fit: contain;
@@ -501,20 +504,55 @@
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
-.certifications > .certifications-table-container > .certifications-table td a,
-.certifications > .certifications-table-container > .certifications-table .certification-link {
+.certifications .certifications-table td a,
+.certifications .certifications-table .certification-link {
   color: #223a5e;
   text-decoration: none;
   font-size: 1.35rem;
   transition: color 0.2s;
 }
-.certifications > .certifications-table-container > .certifications-table td a:hover,
-.certifications > .certifications-table-container > .certifications-table .certification-link:hover {
+.certifications .certifications-table td a:hover,
+.certifications .certifications-table .certification-link:hover {
   color: #2a3950;
 }
-.certifications > .certifications-table-container > .certifications-table tbody tr:last-child td,
-.certifications > .certifications-table-container > .certifications-table tbody tr:last-child th {
+.certifications .certifications-table tbody tr:last-child td,
+.certifications .certifications-table tbody tr:last-child th {
   border-bottom: none;
+}
+@media (max-width: 1440px) {
+  .certifications .certifications-table {
+    font-size: 0.9rem;
+  }
+  .certifications .certifications-table th,
+  .certifications .certifications-table td {
+    padding: 0.6rem 1.2rem;
+  }
+}
+@media (max-width: 769px) {
+  .certifications .certifications-table {
+    font-size: 0.8rem;
+  }
+  .certifications .certifications-table th,
+  .certifications .certifications-table td {
+    padding: 0.5rem 1rem;
+  }
+  .certifications .certifications-table .certification-logo {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 480px) {
+  .certifications .certifications-table {
+    font-size: 0.7rem;
+  }
+  .certifications .certifications-table th,
+  .certifications .certifications-table td {
+    padding: 0.4rem 0.8rem;
+  }
+  .certifications .certifications-table .certification-logo {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .favorite-courses {
@@ -522,7 +560,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
   font-family: "Poppins", sans-serif;
 }
 .favorite-courses .favorite-courses-list {
@@ -534,9 +571,10 @@
   gap: 2rem;
 }
 .favorite-courses .favorite-courses-list > article {
-  background: #e8e9eb;
+  transition: all 0.3s ease;
+  background-color: #e5e5e6;
   border: 1px solid #d3dae2;
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   padding: 1.5rem 1rem 1rem 1rem;
   max-width: 400px;
@@ -599,63 +637,71 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
-  gap: 2rem;
+  text-align: center;
   font-family: "Poppins", sans-serif;
 }
-.contact .contact-form-map {
-  max-width: 1300px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4rem;
+.contact > h2 {
+  flex: 1 1 100%;
 }
-.contact .contact-form-map .contact-form, .contact .contact-form-map .contact-map {
+.contact > .form-section,
+.contact > .contact-map {
+  flex: 1 1 300px;
   max-width: 650px;
-  flex: 1 0 400px;
 }
-.contact .contact-form-map .contact-form {
+.contact > .form-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
 }
-.contact .contact-form-map #contact-form {
+.contact > .form-section > #form-heading {
+  flex: 1 1 100%;
+}
+.contact #form {
+  text-align: left;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.contact .contact-form-map #contact-form .form-group {
+.contact #form .form-group {
   gap: 0.2rem;
   display: flex;
   flex-direction: column;
   border: 0;
 }
-.contact .contact-form-map #contact-form .form-group #contact-form-name, .contact .contact-form-map #contact-form .form-group #contact-form-mail, .contact .contact-form-map #contact-form .form-group #contact-form-topic, .contact .contact-form-map #contact-form .form-group #contact-form-submit {
+.contact #form .form-group #contact-form-name,
+.contact #form .form-group #contact-form-mail,
+.contact #form .form-group #contact-form-topic,
+.contact #form .form-group #contact-form-submit {
   width: 100%;
   height: 2rem;
   padding: 0.5rem;
   font-family: "Poppins", sans-serif;
 }
-.contact .contact-form-map #contact-form .form-group #contact-form-message {
+.contact #form .form-group #contact-form-message {
   width: 100%;
   height: 15rem;
   padding: 0.5rem;
   font-family: "Poppins", sans-serif;
   resize: none;
 }
-.contact .contact-form-map #contact-form #form-name, .contact .contact-form-map #contact-form #form-mail {
-  flex: 1 0 200px;
+.contact #form #form-name,
+.contact #form #form-mail {
+  flex: 1 0 40%;
 }
-.contact .contact-form-map #contact-form #form-topic {
-  flex: 1 1 500px;
+.contact #form #form-topic {
+  flex: 1 1 100%;
 }
-.contact .contact-form-map #contact-form #form-message, .contact .contact-form-map #contact-form #form-submit {
+.contact #form #form-message,
+.contact #form #form-submit {
   flex: 1 0 100%;
 }
-.contact .contact-form-map #contact-form #contact-form-submit {
+.contact #form #contact-form-submit {
   background-color: #223a5e;
   color: #ffffff;
   border: none;
@@ -663,10 +709,10 @@
   transition: all 0.3s ease;
   border-radius: 0.5rem;
 }
-.contact .contact-form-map #contact-form #contact-form-submit:hover {
+.contact #form #contact-form-submit:hover {
   background-color: #1a2c47;
 }
-.contact .contact-form-map .contact-map {
+.contact .contact-map {
   min-height: 350px;
   display: flex;
   justify-content: center;
@@ -732,9 +778,10 @@ main {
 main > section {
   padding: 5rem;
   width: 80%;
+  gap: 1.5rem;
 }
 main > section > .title {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 @media (max-width: 769px) {
   main > section {

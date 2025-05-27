@@ -1,85 +1,173 @@
 @use 'variables';
 
-.contact{
-    @include variables.flex-column;
+.contact {
+    @include variables.flex-center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 2rem;
+    text-align: center;
     font-family: variables.$font-secondary;
 
-    .contact-form-map{
-        max-width: 1300px;
+    >h2 {
+        flex: 1 1 100%;
+    }
+
+    >.form-section,
+    >.contact-map {
+        flex: 1 1 300px;
+        max-width: 650px;
+    }
+
+    >.form-section {
+        @include variables.flex-center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        >#form-heading {
+            flex: 1 1 100%;
+        }
+
+    }
+
+    #form {
+        text-align: left;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 4rem;
+        gap: 1rem;
 
-        .contact-form, .contact-map{
-            max-width: 650px;
-            flex: 1 0 400px;
-        }
-
-        .contact-form{
-            @include variables.flex-column;
-            gap: 1rem;
-        }
-
-        #contact-form{
+        .form-group {
+            gap: 0.2rem;
             display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            
-            .form-group{
-                gap: 0.2rem;
-                display: flex;
-                flex-direction: column;
-                border: 0;
+            flex-direction: column;
+            border: 0;
 
-                #contact-form-name, #contact-form-mail, #contact-form-topic, #contact-form-submit{
-                    width: 100%;
-                    height: 2rem;
-                    padding: 0.5rem;
-                    font-family: variables.$font-secondary;
-                }
-
-                #contact-form-message{
-                    width: 100%;
-                    height: 15rem;
-                    padding: 0.5rem;
-                    font-family: variables.$font-secondary;
-                    resize: none;
-                }
+            #contact-form-name,
+            #contact-form-mail,
+            #contact-form-topic,
+            #contact-form-submit {
+                width: 100%;
+                height: 2rem;
+                padding: 0.5rem;
+                font-family: variables.$font-secondary;
             }
 
-            #form-name, #form-mail{
-                flex: 1 0 200px;
-            }
-
-            #form-topic{
-                flex: 1 1 500px;
-            }
-            
-            #form-message, #form-submit{
-                flex: 1 0 100%;
-            }
-
-            #contact-form-submit{
-                background-color: variables.$button-color;
-                color: variables.$white-text;
-                border: none;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                border-radius: 0.5rem;
-
-                &:hover{
-                    background-color: variables.$button-color-hover;
-                }
+            #contact-form-message {
+                width: 100%;
+                height: 15rem;
+                padding: 0.5rem;
+                font-family: variables.$font-secondary;
+                resize: none;
             }
         }
-        
-        .contact-map{
-            min-height: 350px;
-            @include variables.flex-column;
-            text-align: center;
+
+        #form-name,
+        #form-mail {
+            flex: 1 0 40%;
+        }
+
+        #form-topic {
+            flex: 1 1 100%;
+        }
+
+        #form-message,
+        #form-submit {
+            flex: 1 0 100%;
+        }
+
+        #contact-form-submit {
+            background-color: variables.$button-color;
+            color: variables.$white-text;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+
+            &:hover {
+                background-color: variables.$button-color-hover;
+            }
         }
     }
+
+    .contact-map {
+        min-height: 350px;
+        @include variables.flex-column;
+        text-align: center;
+    }
+
+    // .contact-form-map{
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+    //     gap: 4rem;
+
+    //     .contact-form, .contact-map{
+    //         max-width: 650px;
+    //         flex: 1 0 400px;
+    //     }
+
+    //     .contact-form{
+    //         @include variables.flex-column;
+    //         gap: 1rem;
+    //     }
+
+    //     #contact-form{
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         gap: 1rem;
+
+    //         .form-group{
+    //             gap: 0.2rem;
+    //             display: flex;
+    //             flex-direction: column;
+    //             border: 0;
+
+    //             #contact-form-name, #contact-form-mail, #contact-form-topic, #contact-form-submit{
+    //                 width: 100%;
+    //                 height: 2rem;
+    //                 padding: 0.5rem;
+    //                 font-family: variables.$font-secondary;
+    //             }
+
+    //             #contact-form-message{
+    //                 width: 100%;
+    //                 height: 15rem;
+    //                 padding: 0.5rem;
+    //                 font-family: variables.$font-secondary;
+    //                 resize: none;
+    //             }
+    //         }
+
+    //         #form-name, #form-mail{
+    //             flex: 1 0 200px;
+    //         }
+
+    //         #form-topic{
+    //             flex: 1 1 500px;
+    //         }
+
+    //         #form-message, #form-submit{
+    //             flex: 1 0 100%;
+    //         }
+
+    //         #contact-form-submit{
+    //             background-color: variables.$button-color;
+    //             color: variables.$white-text;
+    //             border: none;
+    //             cursor: pointer;
+    //             transition: all 0.3s ease;
+    //             border-radius: 0.5rem;
+
+    //             &:hover{
+    //                 background-color: variables.$button-color-hover;
+    //             }
+    //         }
+    //     }
+
+    //     .contact-map{
+    //         min-height: 350px;
+    //         @include variables.flex-column;
+    //         text-align: center;
+    //     }
+    // }
 }
