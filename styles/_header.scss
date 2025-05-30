@@ -1,7 +1,7 @@
 @use 'variables';
 
 .about {
-    height: 100vh;
+    height: max(600px, 100vh);
     width: 100%;
     @include variables.flex-column;
 
@@ -10,7 +10,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: max(600px, 100vh);
         z-index: -1;
         background-color: variables.$background-color;
     }
@@ -36,5 +36,55 @@
 
     >.about-description {
         font-size: 1.5rem;
+    }
+
+    @media (max-width: variables.$width-desktop) {
+        >.about-image {
+            width: 18rem;
+            height: 18rem;
+        }
+
+        >.about-name {
+            font-size: 2rem;
+        }
+
+        >.about-description {
+            font-size: 1.35rem;
+        }
+
+        >.about-name,
+        >.about-description {
+            max-width: 80%;
+        }
+    }
+
+    @media (max-width: variables.$width-tablet) {
+        >.about-image {
+            width: 16rem;
+            height: 16rem;
+        }
+
+        >.about-name {
+            font-size: 1.8rem;
+        }
+
+        >.about-description {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: variables.$width-mobile) {
+        >.about-image {
+            width: 14rem;
+            height: 14rem;
+        }
+
+        >.about-name {
+            font-size: 1.6rem;
+        }
+
+        >.about-description {
+            font-size: 1rem;
+        }
     }
 }
