@@ -269,24 +269,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   flex-wrap: wrap;
+  gap: 2rem;
   font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.projects > h2 {
+  flex: 1 1 100%;
 }
 .projects .projects-list {
-  max-width: 1300px;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   gap: 2rem;
   flex-wrap: wrap;
+  width: 100%;
 }
 .projects .projects-list .projects-list-item {
+  flex: 0 1 400px;
+  height: 225px;
   border-radius: 5px;
   position: relative;
-  width: 400px;
-  height: 225px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
