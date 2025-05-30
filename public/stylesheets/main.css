@@ -161,31 +161,25 @@
 .skills {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: baseline;
   flex-wrap: wrap;
+  gap: 2rem;
 }
-.skills .skills-groups {
-  max-width: 1300px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 1rem;
-}
-.skills .skills-groups #skills1,
-.skills .skills-groups #skills2,
-.skills .skills-groups #skills3 {
-  flex: 1 1 500px;
+.skills > h2 {
+  flex: 1 1 100%;
 }
 .skills .skills-group {
-  align-items: center;
+  max-width: 400px;
+  flex: 1 0 360px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 .skills .skills-group .skills-subtitle {
+  flex: 1 1 100%;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
   color: #181b20;
 }
 .skills .skills-list {
@@ -229,29 +223,6 @@
   background-color: #d3dae2;
   border: 1px solid #223a5e;
   box-shadow: 0 4px 16px rgba(34, 58, 94, 0.13);
-}
-.skills::before {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: 10.2vw;
-  width: 200px;
-  height: 30px;
-  background: #f5f5f5;
-  clip-path: path("M 100 0 L 160 0 C 180 2.5 175 21 200 25 L 0 25 C 25 21 20 2.5 40 0 z");
-}
-.skills::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 5px;
-  background: #223a5e;
-  border-radius: 0 0 5px 5px;
-  top: 25px;
-  left: calc(10.2vw + 50px);
-}
-.skills:hover::after {
-  background: #4d719e;
 }
 
 .projects {
@@ -343,6 +314,7 @@
   flex: 1 1 100%;
 }
 .references > .references-list-item {
+  max-width: 400px;
   flex: 1 0 300px;
   display: flex;
   flex-direction: column;
@@ -776,26 +748,38 @@ main {
   background: linear-gradient(0deg, #070707 0%, rgb(14, 18, 29) 50%, rgb(27, 31, 43) 100%);
 }
 main > section {
-  padding: 5rem;
+  padding: 4rem;
   width: 80%;
   gap: 1.5rem;
 }
 main > section > .title {
   margin-bottom: 1rem;
 }
-@media (max-width: 769px) {
+@media (max-width: 1440px) {
   main > section {
     padding: 3rem;
     width: 90%;
   }
 }
+@media (max-width: 769px) {
+  main > section {
+    padding: 2rem;
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  main > section {
+    padding: 1rem;
+    width: 95%;
+  }
+}
 main > :first-child {
-  border-radius: 0.5rem 1rem 0 0;
-  margin-top: 3rem;
+  border-radius: 1rem 1rem 0 0;
+  margin-top: 1rem;
 }
 main > :last-child {
   border-radius: 0 0 1rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 main > :nth-child(odd) {
   background-color: #f5f5f5;

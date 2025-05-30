@@ -1,32 +1,29 @@
 @use 'variables';
 
 .skills {
-    @include variables.flex-column;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     flex-wrap: wrap;
 
-    .skills-groups {
-        max-width: 1300px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 1rem;
-
-        #skills1,
-        #skills2,
-        #skills3 {
-            flex: 1 1 500px;
-        }
+    >h2{
+        flex: 1 1 100%;
     }
 
-    .skills-group {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+    gap: 2rem;
 
+    .skills-group{
+        max-width: 400px;
+        flex: 1 0 360px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        gap: 0.5rem;
+        
         .skills-subtitle {
+            flex: 1 1 100%;
             font-family: variables.$font-secondary;
-            font-size: 1rem;
             color: variables.$black-text;
         }
     }
@@ -71,31 +68,5 @@
                 box-shadow: 0 4px 16px rgba(34, 58, 94, 0.13);
             }
         }
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 25px;
-        left: calc(10.2vw);
-        width: 200px;
-        height: 30px;
-        background: variables.$section-bg-odd;
-        clip-path: path('M 100 0 L 160 0 C 180 2.5 175 21 200 25 L 0 25 C 25 21 20 2.5 40 0 z');
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100px;
-        height: 5px;
-        background: variables.$primary-color;
-        border-radius: 0 0 5px 5px;
-        top: 25px;
-        left: calc(10.2vw + 50px);
-    }
-
-    &:hover::after {
-        background: variables.$section-folder;
     }
 }
