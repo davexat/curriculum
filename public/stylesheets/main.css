@@ -203,7 +203,6 @@
   justify-content: center;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 .skills > h2 {
   flex: 1 1 100%;
@@ -270,19 +269,80 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
 .projects > h2 {
   flex: 1 1 100%;
 }
+.projects .project {
+  flex: 0 1 400px;
+  height: 225px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+}
+.projects .project > figure {
+  width: 100%;
+  height: 100%;
+}
+.projects .project .project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+.projects .project .project-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.projects .project .project-image-overlay .project-details {
+  list-style: none;
+}
+.projects .project .project-image-overlay .project-links {
+  display: flex;
+  gap: 2rem;
+}
+.projects .project .project-image-overlay .project-links a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: #223a5e;
+  padding: 0.25rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.projects .project .project-image-overlay .project-links a:hover {
+  color: #e8e9eb;
+  background-color: #1a2c47;
+}
+.projects .project:hover .project-image-overlay {
+  opacity: 1;
+}
 .projects .projects-list {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -350,7 +410,6 @@
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 2rem;
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
@@ -359,7 +418,7 @@
 }
 .references > .references-list-item {
   max-width: 400px;
-  flex: 1 0 300px;
+  flex: 1 1 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -424,38 +483,46 @@
 .experience {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: baseline;
   flex-wrap: wrap;
+  column-gap: 2.5rem;
   font-family: "Poppins", sans-serif;
 }
-.experience .experience-groups {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 4rem;
+.experience > h2 {
+  flex: 1 1 100%;
 }
-.experience .experience-groups .experience-group {
-  max-width: 70vw;
+.experience > .experience-group {
+  max-width: 600px;
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }
-.experience .experience-groups .experience-subtitle {
-  text-align: center;
+.experience > .experience-group > header {
+  flex: 1 1 100%;
 }
-.experience .experience-list {
+.experience > .experience-group > .experience-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   border-left: 2px solid #223a5e;
-  padding-left: 1.195rem;
+  padding-left: 16px;
 }
-.experience .experience-list-item .experience-list-item-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
+.experience > .experience-group > .experience-list > .experience-list-item {
+  position: relative;
 }
-.experience .experience-list-item::marker {
-  color: #223a5e;
-  font-size: 1.6rem;
+.experience > .experience-group > .experience-list > .experience-list-item > article::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: -22px;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  background-color: #223a5e;
 }
 
 .certifications {
@@ -576,7 +643,6 @@
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 2rem;
   font-family: "Poppins", sans-serif;
   text-align: center;
 }
@@ -585,7 +651,7 @@
 }
 .favorite-courses > .course {
   max-width: 400px;
-  flex: 1 0 300px;
+  flex: 1 1 300px;
   transition: all 0.3s ease;
   background-color: #e5e5e6;
   border: 1px solid #d3dae2;
@@ -792,7 +858,7 @@ main > section {
   gap: 1.5rem;
 }
 main > section > .title {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 @media (max-width: 1440px) {
   main > section {

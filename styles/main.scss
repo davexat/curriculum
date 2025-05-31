@@ -30,7 +30,7 @@ main {
         gap: 1.5rem;
 
         >.title {
-            margin-bottom: 1rem;
+            margin: 1rem 0;
         }
 
         @media (max-width: variables.$width-desktop) {

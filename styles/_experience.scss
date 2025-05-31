@@ -1,44 +1,89 @@
 @use 'variables';
 
 .experience {
-    @include variables.flex-column;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     flex-wrap: wrap;
+    column-gap: 2.5rem;
+
+    >h2 {
+        flex: 1 1 100%;
+    }
+
     font-family: variables.$font-secondary;
 
-    .experience-groups {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 4rem;
-
-        .experience-group {
-            max-width: 70vw;
-        }
-
-        .experience-subtitle {
-            text-align: center;
-        }
-    }
-
-    .experience-list {
-        display: flex;
-        flex-direction: column;
+    >.experience-group {
+        max-width: 600px;
+        flex: 1 1 300px;
+        @include variables.flex-column;
         gap: 1rem;
-        border-left: 2px solid variables.$marker-color;
-        padding-left: 1.195rem;
-    }
 
-    .experience-list-item {
+        >header {
+            flex: 1 1 100%;
+        }
 
-        .experience-list-item-group {
+        >.experience-list {
+            list-style: none;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            gap: 0.5rem;
-        }
+            gap: 1rem;
+            border-left: 2px solid variables.$marker-color;
+            padding-left: 16px;
 
-        &::marker {
-            color: variables.$marker-color;
-            font-size: 1.6rem;
+            >.experience-list-item {
+                position: relative;
+
+                >article {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        border-radius: 50%;
+                        left: -22px;
+                        top: 9px;
+                        width: 10px;
+                        height: 10px;
+                        background-color: variables.$marker-color;
+                    }
+                }
+            }
         }
     }
+
+    // .experience-groups {
+    //     display: grid;
+    //     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    //     gap: 2rem;
+
+    //     .experience-group {
+    //         max-width: 70vw;
+    //     }
+
+    //     .experience-subtitle {
+    //         text-align: center;
+    //     }
+    // }
+
+    // .experience-list {
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 1rem;
+    //     border-left: 2px solid variables.$marker-color;
+    //     padding-left: 1.195rem;
+    // }
+
+    // .experience-list-item {
+
+    //     .experience-list-item-group {
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: center;
+    //         gap: 0.5rem;
+    //     }
+
+    //     &::marker {
+    //         color: variables.$marker-color;
+    //         font-size: 1.6rem;
+    //     }
+    // }
 }

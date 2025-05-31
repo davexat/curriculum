@@ -10,13 +10,12 @@
         flex: 1 1 100%;
     }
 
-    gap: 2rem;
     font-family: variables.$font-secondary;
     text-align: center;
 
     >.course {
         max-width: 400px;
-        flex: 1 0 300px;
+        flex: 1 1 300px;
 
         transition: all 0.3s ease;
         background-color: variables.$project-color;

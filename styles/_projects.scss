@@ -6,22 +6,88 @@
     align-items: center;
     flex-wrap: wrap;
 
-    >h2{
+    >h2 {
         flex: 1 1 100%;
     }
 
-    gap: 2rem;
     font-family: variables.$font-secondary;
     text-align: center;
 
-    .projects-list{
+    .project {
+        flex: 0 1 400px;
+        height: 225px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        @include variables.flex-center;
+        font-family: variables.$font-secondary;
+        font-size: 0.8rem;
+
+        > figure {
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            display: block;
+        }
+
+        .project-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            overflow-y: auto;
+            @include variables.flex-column;
+            gap: 1rem;
+
+            .project-details {
+                list-style: none;
+            }
+
+            .project-links {
+                display: flex;
+                gap: 2rem;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    background-color: variables.$button-color;
+                    padding: 0.25rem 1.5rem;
+                    border-radius: 0.5rem;
+
+                    &:hover {
+                        color: variables.$tech-color;
+                        background-color: variables.$button-color-hover;
+                    }
+                }
+            }
+        }
+
+        &:hover .project-image-overlay {
+            opacity: 1;
+        }
+    }
+
+    .projects-list {
         @include variables.flex-center;
         list-style: none;
-        gap: 2rem;
+        gap: 1.5rem;
         flex-wrap: wrap;
         width: 100%;
 
-        .projects-list-item{
+        .projects-list-item {
             flex: 0 1 400px;
             height: 225px;
 
@@ -35,14 +101,14 @@
             font-family: variables.$font-secondary;
             font-size: 0.8rem;
 
-            .projects-list-item-image{
+            .projects-list-item-image {
                 width: 100%;
                 height: 100%;
                 object-fit: fill;
                 display: block;
             }
 
-            .projects-list-item-image-overlay{
+            .projects-list-item-image-overlay {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -57,15 +123,15 @@
                 @include variables.flex-column;
                 gap: 2rem;
 
-                .projects-list-item-details{
+                .projects-list-item-details {
                     list-style: none;
                 }
 
-                .projects-list-item-links{
+                .projects-list-item-links {
                     display: flex;
                     gap: 3rem;
 
-                    a{
+                    a {
                         color: white;
                         text-decoration: none;
                         transition: all 0.3s ease;
@@ -73,7 +139,7 @@
                         padding: 0.25rem 1.5rem;
                         border-radius: 0.5rem;
 
-                        &:hover{
+                        &:hover {
                             color: variables.$tech-color;
                             background-color: variables.$button-color-hover;
                         }
@@ -81,7 +147,7 @@
                 }
             }
 
-            &:hover .projects-list-item-image-overlay{
+            &:hover .projects-list-item-image-overlay {
                 opacity: 1;
             }
         }
