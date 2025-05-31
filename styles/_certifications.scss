@@ -9,7 +9,7 @@
         flex: 1 1 100%;
     }
 
-    >.table-container{
+    >.table-container {
         overflow-x: auto;
         max-width: 100%;
     }
@@ -88,6 +88,7 @@
         }
 
         @media (max-width: variables.$width-desktop) {
+
             th,
             td {
                 padding: 0.6rem 1.2rem;
@@ -95,6 +96,7 @@
         }
 
         @media (max-width: variables.$width-tablet) {
+
             th,
             td {
                 padding: 0.5rem 1rem;
@@ -107,6 +109,7 @@
         }
 
         @media (max-width: variables.$width-mobile) {
+
             th,
             td {
                 padding: 0.4rem 0.8rem;

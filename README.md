@@ -43,17 +43,20 @@ curriculum/
 │   ├── icons/                      <- Website icons
 │   ├── images/                     <- Website images
 │   ├── scripts/                    <- Website scripts
-│   └── stylesheets/                <- Website styles
+│   └── stylesheets/                <- Website style
 ├── styles/
-│   ├── _about.scss                 <- About styles
-│   ├── _contact.scss               <- Contact styles
-│   ├── _experience.scss            <- Experience styles
-│   ├── _footer.scss                <- Footer styles
-│   ├── _navbar.scss                <- Navbar styles
-│   ├── _projects.scss              <- Projects styles
-│   ├── _skills.scss                <- Skills styles
-│   ├── _variables.scss             <- Sass variables for the website
-│   └── main.scss                   <- Main styles
+│   ├── _variables.scss             <- Sass variables
+│   ├── _header.scss                <- Header style
+│   ├── _navbar.scss                <- Nav style
+│   ├── _skills.scss                <- Skills style
+│   ├── _projects.scss              <- Projects style
+│   ├── _references.scss            <- Projects style
+│   ├── _experience.scss            <- Experience style
+│   ├── _certifications.scss        <- Projects style
+│   ├── _courses.scss               <- Courses style
+│   ├── _contact.scss               <- Contact style
+│   ├── _footer.scss                <- Footer style
+│   └── main.scss                   <- Main style
 ```
 
 ## Installation

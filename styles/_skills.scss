@@ -6,11 +6,11 @@
     align-items: baseline;
     flex-wrap: wrap;
 
-    >h2{
+    >h2 {
         flex: 1 1 100%;
     }
 
-    .skills-group{
+    .skills-group {
         max-width: 400px;
         flex: 1 1 360px;
         display: flex;
@@ -18,7 +18,7 @@
         text-align: center;
         justify-content: center;
         gap: 0.5rem;
-        
+
         .skills-subtitle {
             flex: 1 1 100%;
             font-family: variables.$font-secondary;

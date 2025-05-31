@@ -64,16 +64,16 @@
             }
         }
     }
-    
+
     @media (max-width: variables.$width-tablet) {
         padding: 1rem;
         justify-content: space-between;
         flex-direction: row;
-        
+
         .menu-toggle {
             display: flex;
         }
-        
+
         >.nav-list {
             position: absolute;
             top: 0;
@@ -89,28 +89,28 @@
             &.open {
                 right: 0;
             }
-            
+
             .nav-item {
                 width: 100%;
-                
+
                 a {
                     text-align: left;
                     padding: 15px 20px;
                 }
             }
         }
-        
+
         &.menu-active {
             .menu-toggle {
                 span {
                     &:first-child {
                         transform: rotate(45deg);
                     }
-                    
+
                     &:nth-child(2) {
                         opacity: 0;
                     }
-                    
+
                     &:nth-child(3) {
                         transform: rotate(-45deg);
                     }
