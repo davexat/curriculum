@@ -14,7 +14,7 @@
     text-align: center;
 
     > .references-list-item {
-        max-width: 400px;
+        max-width: 350px;
         flex: 1 1 300px;
         display: flex;
         flex-direction: column;
@@ -56,13 +56,13 @@
     .reference-quote {
         font-style: italic;
         color: variables.$button-color-hover;
-        font-size: 1.1rem;
         margin: 0.5rem 0;
+        font-size: 1.05rem;
 
         p::before {
             content: '"';
             color: variables.$quote;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
         }
     }
 

@@ -75,7 +75,6 @@
         .certification-link {
             color: variables.$primary-color;
             text-decoration: none;
-            font-size: 1.35rem;
             transition: color 0.2s;
 
             &:hover {
@@ -89,7 +88,6 @@
         }
 
         @media (max-width: variables.$width-desktop) {
-            font-size: 0.9rem;
             th,
             td {
                 padding: 0.6rem 1.2rem;
@@ -97,7 +95,6 @@
         }
 
         @media (max-width: variables.$width-tablet) {
-            font-size: 0.8rem;
             th,
             td {
                 padding: 0.5rem 1rem;
@@ -110,7 +107,6 @@
         }
 
         @media (max-width: variables.$width-mobile) {
-            font-size: 0.7rem;
             th,
             td {
                 padding: 0.4rem 0.8rem;

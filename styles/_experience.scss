@@ -49,41 +49,4 @@
             }
         }
     }
-
-    // .experience-groups {
-    //     display: grid;
-    //     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    //     gap: 2rem;
-
-    //     .experience-group {
-    //         max-width: 70vw;
-    //     }
-
-    //     .experience-subtitle {
-    //         text-align: center;
-    //     }
-    // }
-
-    // .experience-list {
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 1rem;
-    //     border-left: 2px solid variables.$marker-color;
-    //     padding-left: 1.195rem;
-    // }
-
-    // .experience-list-item {
-
-    //     .experience-list-item-group {
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: center;
-    //         gap: 0.5rem;
-    //     }
-
-    //     &::marker {
-    //         color: variables.$marker-color;
-    //         font-size: 1.6rem;
-    //     }
-    // }
 }

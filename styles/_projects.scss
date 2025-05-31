@@ -19,10 +19,11 @@
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
+        border-radius: 0.5rem;
 
         @include variables.flex-center;
         font-family: variables.$font-secondary;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
 
         > figure {
             width: 100%;
@@ -99,7 +100,7 @@
             flex-direction: column;
             justify-content: center;
             font-family: variables.$font-secondary;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
 
             .projects-list-item-image {
                 width: 100%;
