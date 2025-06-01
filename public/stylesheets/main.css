@@ -403,19 +403,20 @@
 }
 
 .experience {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
   align-items: baseline;
-  flex-wrap: wrap;
-  column-gap: 2.5rem;
+  justify-content: center;
+  column-gap: 1.5rem;
+  row-gap: 0;
   font-family: "Poppins", sans-serif;
 }
 .experience > h2 {
-  flex: 1 1 100%;
+  grid-column: 1/-1;
 }
 .experience > .experience-group {
   max-width: 600px;
-  flex: 1 1 300px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -445,6 +446,17 @@
   width: 10px;
   height: 10px;
   background-color: #223a5e;
+}
+.experience > .experience-group:first-of-type {
+  justify-self: end;
+}
+@media (max-width: 769px) {
+  .experience {
+    grid-template-columns: 1fr;
+  }
+  .experience > .experience-group:first-of-type {
+    justify-self: stretch;
+  }
 }
 
 .certifications {
